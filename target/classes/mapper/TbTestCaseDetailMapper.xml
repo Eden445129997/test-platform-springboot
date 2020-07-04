@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.platform.dao.TbTestCaseDetailMapper">
+  <resultMap id="BaseResultMap" type="com.platform.entity.TbTestCaseDetail">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="case_id" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="interface_id" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="reconnection_times" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="wait_time" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="mock_status" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="text" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="sort" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="status" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="expression_status" javaType="java.lang.Boolean" jdbcType="BIT" />
+    </constructor>
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.platform.entity.TbTestCaseDetailWithBLOBs">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="case_id" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="interface_id" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="reconnection_times" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="wait_time" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="mock_status" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="text" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="sort" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="status" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="expression_status" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="headers" javaType="java.lang.String" jdbcType="LONGVARCHAR" />
+      <arg column="data" javaType="java.lang.String" jdbcType="LONGVARCHAR" />
+      <arg column="mock_response" javaType="java.lang.String" jdbcType="LONGVARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, case_id, interface_id, reconnection_times, wait_time, mock_status, text, sort, 
+    status, create_time, update_time, expression_status
+  </sql>
+  <sql id="Blob_Column_List">
+    headers, data, mock_response
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from tb_test_case_detail
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from tb_test_case_detail
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.platform.entity.TbTestCaseDetailWithBLOBs">
+    insert into tb_test_case_detail (id, case_id, interface_id, 
+      reconnection_times, wait_time, mock_status, 
+      text, sort, status, create_time, 
+      update_time, expression_status, headers, 
+      data, mock_response)
+    values (#{id,jdbcType=INTEGER}, #{caseId,jdbcType=VARCHAR}, #{interfaceId,jdbcType=VARCHAR}, 
+      #{reconnectionTimes,jdbcType=INTEGER}, #{waitTime,jdbcType=INTEGER}, #{mockStatus,jdbcType=BIT}, 
+      #{text,jdbcType=VARCHAR}, #{sort,jdbcType=INTEGER}, #{status,jdbcType=BIT}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{expressionStatus,jdbcType=BIT}, #{headers,jdbcType=LONGVARCHAR}, 
+      #{data,jdbcType=LONGVARCHAR}, #{mockResponse,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.platform.entity.TbTestCaseDetailWithBLOBs">
+    insert into tb_test_case_detail
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="caseId != null">
+        case_id,
+      </if>
+      <if test="interfaceId != null">
+        interface_id,
+      </if>
+      <if test="reconnectionTimes != null">
+        reconnection_times,
+      </if>
+      <if test="waitTime != null">
+        wait_time,
+      </if>
+      <if test="mockStatus != null">
+        mock_status,
+      </if>
+      <if test="text != null">
+        text,
+      </if>
+      <if test="sort != null">
+        sort,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="expressionStatus != null">
+        expression_status,
+      </if>
+      <if test="headers != null">
+        headers,
+      </if>
+      <if test="data != null">
+        data,
+      </if>
+      <if test="mockResponse != null">
+        mock_response,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="caseId != null">
+        #{caseId,jdbcType=VARCHAR},
+      </if>
+      <if test="interfaceId != null">
+        #{interfaceId,jdbcType=VARCHAR},
+      </if>
+      <if test="reconnectionTimes != null">
+        #{reconnectionTimes,jdbcType=INTEGER},
+      </if>
+      <if test="waitTime != null">
+        #{waitTime,jdbcType=INTEGER},
+      </if>
+      <if test="mockStatus != null">
+        #{mockStatus,jdbcType=BIT},
+      </if>
+      <if test="text != null">
+        #{text,jdbcType=VARCHAR},
+      </if>
+      <if test="sort != null">
+        #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=BIT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="expressionStatus != null">
+        #{expressionStatus,jdbcType=BIT},
+      </if>
+      <if test="headers != null">
+        #{headers,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="data != null">
+        #{data,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="mockResponse != null">
+        #{mockResponse,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.platform.entity.TbTestCaseDetailWithBLOBs">
+    update tb_test_case_detail
+    <set>
+      <if test="caseId != null">
+        case_id = #{caseId,jdbcType=VARCHAR},
+      </if>
+      <if test="interfaceId != null">
+        interface_id = #{interfaceId,jdbcType=VARCHAR},
+      </if>
+      <if test="reconnectionTimes != null">
+        reconnection_times = #{reconnectionTimes,jdbcType=INTEGER},
+      </if>
+      <if test="waitTime != null">
+        wait_time = #{waitTime,jdbcType=INTEGER},
+      </if>
+      <if test="mockStatus != null">
+        mock_status = #{mockStatus,jdbcType=BIT},
+      </if>
+      <if test="text != null">
+        text = #{text,jdbcType=VARCHAR},
+      </if>
+      <if test="sort != null">
+        sort = #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=BIT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="expressionStatus != null">
+        expression_status = #{expressionStatus,jdbcType=BIT},
+      </if>
+      <if test="headers != null">
+        headers = #{headers,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="data != null">
+        data = #{data,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="mockResponse != null">
+        mock_response = #{mockResponse,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.platform.entity.TbTestCaseDetailWithBLOBs">
+    update tb_test_case_detail
+    set case_id = #{caseId,jdbcType=VARCHAR},
+      interface_id = #{interfaceId,jdbcType=VARCHAR},
+      reconnection_times = #{reconnectionTimes,jdbcType=INTEGER},
+      wait_time = #{waitTime,jdbcType=INTEGER},
+      mock_status = #{mockStatus,jdbcType=BIT},
+      text = #{text,jdbcType=VARCHAR},
+      sort = #{sort,jdbcType=INTEGER},
+      status = #{status,jdbcType=BIT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      expression_status = #{expressionStatus,jdbcType=BIT},
+      headers = #{headers,jdbcType=LONGVARCHAR},
+      data = #{data,jdbcType=LONGVARCHAR},
+      mock_response = #{mockResponse,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.platform.entity.TbTestCaseDetail">
+    update tb_test_case_detail
+    set case_id = #{caseId,jdbcType=VARCHAR},
+      interface_id = #{interfaceId,jdbcType=VARCHAR},
+      reconnection_times = #{reconnectionTimes,jdbcType=INTEGER},
+      wait_time = #{waitTime,jdbcType=INTEGER},
+      mock_status = #{mockStatus,jdbcType=BIT},
+      text = #{text,jdbcType=VARCHAR},
+      sort = #{sort,jdbcType=INTEGER},
+      status = #{status,jdbcType=BIT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      expression_status = #{expressionStatus,jdbcType=BIT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

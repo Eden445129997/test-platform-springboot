@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22cbf895-c90d-43dc-98d5-9a155dd54473" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/StudyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/StudyApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/dao/UserDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/entity/UserEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/singleton/SingletonMybatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/common/singleton/SingletonMybatis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/userMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-mybatis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/study/StudyApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/platform/demo/StudyApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/study.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/StudyApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/singleton/SingletonMybatis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/demo/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/demo/dao/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/demo/entity/ProjectEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/demo/entity/UserEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/userMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring-mybatis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/study.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/platform/demo/StudyApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +80,7 @@
       <workItem from="1593506072818" duration="10336000" />
       <workItem from="1593595709384" duration="10620000" />
       <workItem from="1593840653112" duration="964000" />
-      <workItem from="1593841628118" duration="3000" />
+      <workItem from="1593841628118" duration="1649000" />
     </task>
     <servers />
   </component>
