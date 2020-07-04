@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.platform.dao.TbCheckPointMapper">
+  <resultMap id="BaseResultMap" type="com.platform.entity.TbCheckPoint">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="case_detail_id" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="check_object" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="check_method" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="text" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="status" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+    </constructor>
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.platform.entity.TbCheckPoint">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="case_detail_id" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="check_object" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="check_method" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="text" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="status" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="check_value" javaType="java.lang.String" jdbcType="LONGVARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, case_detail_id, check_object, check_method, text, status, create_time, update_time
+  </sql>
+  <sql id="Blob_Column_List">
+    check_value
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from tb_check_point
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from tb_check_point
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.platform.entity.TbCheckPoint">
+    insert into tb_check_point (id, case_detail_id, check_object, 
+      check_method, text, status, 
+      create_time, update_time, check_value
+      )
+    values (#{id,jdbcType=INTEGER}, #{caseDetailId,jdbcType=VARCHAR}, #{checkObject,jdbcType=VARCHAR}, 
+      #{checkMethod,jdbcType=VARCHAR}, #{text,jdbcType=VARCHAR}, #{status,jdbcType=BIT}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{checkValue,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.platform.entity.TbCheckPoint">
+    insert into tb_check_point
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="caseDetailId != null">
+        case_detail_id,
+      </if>
+      <if test="checkObject != null">
+        check_object,
+      </if>
+      <if test="checkMethod != null">
+        check_method,
+      </if>
+      <if test="text != null">
+        text,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="checkValue != null">
+        check_value,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="caseDetailId != null">
+        #{caseDetailId,jdbcType=VARCHAR},
+      </if>
+      <if test="checkObject != null">
+        #{checkObject,jdbcType=VARCHAR},
+      </if>
+      <if test="checkMethod != null">
+        #{checkMethod,jdbcType=VARCHAR},
+      </if>
+      <if test="text != null">
+        #{text,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=BIT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="checkValue != null">
+        #{checkValue,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.platform.entity.TbCheckPoint">
+    update tb_check_point
+    <set>
+      <if test="caseDetailId != null">
+        case_detail_id = #{caseDetailId,jdbcType=VARCHAR},
+      </if>
+      <if test="checkObject != null">
+        check_object = #{checkObject,jdbcType=VARCHAR},
+      </if>
+      <if test="checkMethod != null">
+        check_method = #{checkMethod,jdbcType=VARCHAR},
+      </if>
+      <if test="text != null">
+        text = #{text,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=BIT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="checkValue != null">
+        check_value = #{checkValue,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.platform.entity.TbCheckPoint">
+    update tb_check_point
+    set case_detail_id = #{caseDetailId,jdbcType=VARCHAR},
+      check_object = #{checkObject,jdbcType=VARCHAR},
+      check_method = #{checkMethod,jdbcType=VARCHAR},
+      text = #{text,jdbcType=VARCHAR},
+      status = #{status,jdbcType=BIT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      check_value = #{checkValue,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.platform.entity.TbCheckPoint">
+    update tb_check_point
+    set case_detail_id = #{caseDetailId,jdbcType=VARCHAR},
+      check_object = #{checkObject,jdbcType=VARCHAR},
+      check_method = #{checkMethod,jdbcType=VARCHAR},
+      text = #{text,jdbcType=VARCHAR},
+      status = #{status,jdbcType=BIT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
