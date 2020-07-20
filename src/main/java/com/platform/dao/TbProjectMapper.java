@@ -1,17 +1,11 @@
 package com.platform.dao;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.platform.entity.TbProject;
 
-public interface TbProjectMapper {
-    int deleteByPrimaryKey(Integer id);
+import java.util.List;
 
-    int insert(TbProject record);
+public interface TbProjectMapper extends BaseMapper<TbProject> {
 
-    int insertSelective(TbProject record);
-
-    TbProject selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(TbProject record);
-
-    int updateByPrimaryKey(TbProject record);
+    public List<TbProject> queryProjectByName(String name);
 }

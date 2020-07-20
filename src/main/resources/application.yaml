@@ -1,0 +1,35 @@
+# Tomcat
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 1000
+    min-spare-threads: 30
+  port: 11001
+#  connection-timeout: 5000ms
+#  servlet:
+#    context-path: /dianQmService
+
+spring:
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://111.229.54.5:3306/test_platform?useUnicode=true&amp;characterEncoding=UTF-8
+#    url: jdbc:mysql://10.113.248.203:3306/test_platform?useUnicode=true&amp;characterEncoding=utf8
+    username: root
+    password: root
+#    password: didong1904
+#    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis-plus:
+  mapper-locations: classpath:/mappers/*.xml
+  configuration:
+    #开启sql日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    # 关闭MP3.0自带的banner
+    banner: false
+    db-config:
+      # 默认数据库表下划线命名
+      table-underline: true

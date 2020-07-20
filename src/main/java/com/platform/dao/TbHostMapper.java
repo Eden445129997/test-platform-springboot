@@ -1,17 +1,7 @@
 package com.platform.dao;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.platform.entity.TbHost;
 
-public interface TbHostMapper {
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(TbHost record);
-
-    int insertSelective(TbHost record);
-
-    TbHost selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(TbHost record);
-
-    int updateByPrimaryKey(TbHost record);
+public interface TbHostMapper extends BaseMapper<TbHost> {
 }

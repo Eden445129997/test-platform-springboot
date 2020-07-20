@@ -1,20 +1,7 @@
 package com.platform.dao;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.platform.entity.TbTestCaseDetail;
-import com.platform.entity.TbTestCaseDetailWithBLOBs;
 
-public interface TbTestCaseDetailMapper {
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(TbTestCaseDetailWithBLOBs record);
-
-    int insertSelective(TbTestCaseDetailWithBLOBs record);
-
-    TbTestCaseDetailWithBLOBs selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(TbTestCaseDetailWithBLOBs record);
-
-    int updateByPrimaryKeyWithBLOBs(TbTestCaseDetailWithBLOBs record);
-
-    int updateByPrimaryKey(TbTestCaseDetail record);
+public interface TbTestCaseDetailMapper extends BaseMapper<TbTestCaseDetail> {
 }
