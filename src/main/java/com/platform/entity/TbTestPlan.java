@@ -16,7 +16,7 @@ import java.io.Serializable;
 @TableName("tb_test_plan")
 public class TbTestPlan extends BaseEntity implements Serializable {
 
-    private String projectId;
+    private Integer projectId;
 
     private String planName;
 

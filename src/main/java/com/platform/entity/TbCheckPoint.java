@@ -16,7 +16,7 @@ import java.io.Serializable;
 @TableName("tb_check_point")
 public class TbCheckPoint extends BaseEntity implements Serializable {
 
-    private String caseDetailId;
+    private Integer caseDetailId;
 
     private String checkObject;
 

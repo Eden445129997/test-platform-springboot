@@ -16,9 +16,9 @@ import java.io.Serializable;
 @TableName("tb_test_case_detail")
 public class TbTestCaseDetail extends BaseEntity implements Serializable {
 
-    private String caseId;
+    private Integer caseId;
 
-    private String interfaceId;
+    private Integer interfaceId;
 
     private Boolean expressionStatus;
 

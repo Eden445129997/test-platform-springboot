@@ -16,11 +16,9 @@ import java.io.Serializable;
 @TableName("tb_busi_model")
 public class TbBusiModel extends BaseEntity implements Serializable {
 
-    private String projectId;
+    private Integer projectId;
 
     private String busiName;
-
-    private Integer total;
 
     private String text;
 

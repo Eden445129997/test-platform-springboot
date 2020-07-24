@@ -16,9 +16,9 @@ import java.io.Serializable;
 @TableName("tb_interface")
 public class TbInterface extends BaseEntity implements Serializable {
 
-    private String projectId;
+    private Integer projectId;
 
-    private String busiId;
+    private Integer busiId;
 
     private String apiName;
 

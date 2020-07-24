@@ -13,7 +13,7 @@ import lombok.ToString;
 @TableName("tb_host")
 public class TbHost {
 
-    private String projectId;
+    private Integer projectId;
 
     private String hostName;
 

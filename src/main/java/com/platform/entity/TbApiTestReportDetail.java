@@ -15,9 +15,9 @@ import java.io.Serializable;
 @TableName("tb_api_test_report_detail")
 public class TbApiTestReportDetail implements Serializable {
 
-    private String caseId;
+    private Integer caseId;
 
-    private String reportId;
+    private Integer reportId;
 
     private String apiName;
 
