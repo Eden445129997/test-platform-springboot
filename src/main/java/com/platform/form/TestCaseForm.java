@@ -9,7 +9,7 @@ import javax.validation.constraints.Size;
 @Data
 public class TestCaseForm extends BaseForm {
 
-    private String plan_id;
+    private Integer plan_id;
 
     @NotBlank(message="用例名称不能为空")
     @Size(max = 10, message = "用例名称不能超过10个字符")
