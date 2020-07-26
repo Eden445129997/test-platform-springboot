@@ -21,5 +21,4 @@ public class TbHost {
 
     private String text;
 
-    private Boolean status;
 }

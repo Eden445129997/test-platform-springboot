@@ -22,6 +22,4 @@ public class TbBusiModel extends BaseEntity implements Serializable {
 
     private String text;
 
-    private Boolean status;
-
 }

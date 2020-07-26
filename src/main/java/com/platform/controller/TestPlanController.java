@@ -1,46 +1,46 @@
-//package com.platform.controller;
-//
-//import com.platform.common.Response;
-//import com.platform.common.dto.page.PageResult;
-//import com.platform.common.enums.ResStatus;
-//import com.platform.entity.TbProject;
-//import com.platform.form.ProjectForm;
-//import com.platform.service.ProjectService;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.validation.annotation.Validated;
-//import org.springframework.web.bind.annotation.*;
-//
-//import java.util.List;
-//
-//@RestController
-////@RequestMapping("/project")
-//public class ProjectController {
-//
-//    @Autowired
-//    private ProjectService projectService;
-//
-//    @RequestMapping(method = RequestMethod.GET,value = "/queryProjectByName")
-//    public Response<List<TbProject>> queryProjectByName(ProjectForm projectForm){
-//        PageResult<TbProject> result;
-//        result = projectService.queryProjectByName(projectForm);
-//        return Response.success(ResStatus.SUCCESS.getMessage(),result.getResult(),result.getTotalElement());
-//    }
-//
-//    @RequestMapping(method = RequestMethod.POST, value ="/addProject")
-//    public Response<TbProject> addProject(@RequestBody @Validated ProjectForm projectForm) {
-//        return Response.success(ResStatus.SUCCESS.getMessage(),projectService.addProject(projectForm));
-//    };
-//
-//    @RequestMapping(method = RequestMethod.PUT, value ="/updateProject")
-//    public Response<TbProject> updateProject(@RequestBody ProjectForm projectForm) {
-//        if (projectForm.getId() == null) {
-//            return Response.error(ResStatus.PARAMETER_ERROR);
-//        }
-//        return Response.success(ResStatus.SUCCESS.getMessage(),projectService.updateProject(projectForm));
-//    };
-//
-//    @RequestMapping(method = RequestMethod.DELETE, value ="/deleteProject")
-//    public Response<TbProject> deleteProject(@RequestParam Integer id) {
-//        return Response.success(ResStatus.SUCCESS.getMessage(),projectService.logicalDeleteProject(id));
-//    };
-//}
+package com.platform.controller;
+
+import com.platform.common.Response;
+import com.platform.common.dto.page.PageResult;
+import com.platform.common.enums.ResStatus;
+import com.platform.entity.TbTestPlan;
+import com.platform.form.TestPlanForm;
+import com.platform.service.TestPlanService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+//@RequestMapping("/project")
+public class TestPlanController {
+
+    @Autowired
+    private TestPlanService testPlanService;
+
+    @RequestMapping(method = RequestMethod.GET,value = "/queryTestPlanByName")
+    public Response<List<TbTestPlan>> queryTestPlanByName(TestPlanForm testPlanForm){
+        PageResult<TbTestPlan> result;
+        result = testPlanService.queryTestPlanByName(testPlanForm);
+        return Response.success(ResStatus.SUCCESS.getMessage(),result.getResult(),result.getTotalElement());
+    }
+
+    @RequestMapping(method = RequestMethod.POST, value ="/addTestPlan")
+    public Response<TbTestPlan> addTestPlan(@RequestBody @Validated TestPlanForm testPlanForm) {
+        return Response.success(ResStatus.SUCCESS.getMessage(),testPlanService.addTestPlan(testPlanForm));
+    };
+
+    @RequestMapping(method = RequestMethod.PUT, value ="/updateTestPlan")
+    public Response<TbTestPlan> updateTestPlan(@RequestBody TestPlanForm testPlanForm) {
+        if (testPlanForm.getId() == null) {
+            return Response.error(ResStatus.PARAMETER_ERROR);
+        }
+        return Response.success(ResStatus.SUCCESS.getMessage(),testPlanService.updateTestPlan(testPlanForm));
+    };
+
+    @RequestMapping(method = RequestMethod.DELETE, value ="/logicalDeleteTestPlan")
+    public Response<TbTestPlan> logicalDeleteTestPlan(@RequestParam Integer id) {
+        return Response.success(ResStatus.SUCCESS.getMessage(),testPlanService.logicalDeleteTestPlan(id));
+    };
+}

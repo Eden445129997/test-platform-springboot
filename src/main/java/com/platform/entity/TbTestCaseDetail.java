@@ -20,23 +20,21 @@ public class TbTestCaseDetail extends BaseEntity implements Serializable {
 
     private Integer interfaceId;
 
-    private Boolean expressionStatus;
+    private Integer reconnectionTimes;
+
+    private Integer waitTime;
+
+    private Boolean isMock;
+
+    private String mockResponse;
+
+    private Boolean isExpression;
 
     private String headers;
 
     private String data;
 
-    private String mockResponse;
-
-    private Integer reconnectionTimes;
-
-    private Integer waitTime;
-
-    private Boolean mockStatus;
-
     private String text;
 
     private Integer sort;
-
-    private Boolean status;
 }

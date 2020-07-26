@@ -22,8 +22,5 @@ public class TbTestCase extends BaseEntity implements Serializable {
 
     private String text;
 
-    private Boolean status;
-
     private Integer sort;
-
 }

@@ -23,7 +23,4 @@ public class TbTestPlan extends BaseEntity implements Serializable {
     private String creater;
 
     private String text;
-
-    private Boolean status;
-
 }

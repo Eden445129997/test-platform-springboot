@@ -21,6 +21,8 @@ public class MetaHandler implements MetaObjectHandler {
     public void insertFill(MetaObject metaObject) {
         this.setFieldValByName("createTime", new Date(), metaObject);
         this.setFieldValByName("updateTime", new Date(), metaObject);
+        this.setFieldValByName("isStatus", true, metaObject);
+        this.setFieldValByName("isDelete", false, metaObject);
     }
 
     /**

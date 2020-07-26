@@ -28,7 +28,6 @@ public class ProjectController {
 
     @RequestMapping(method = RequestMethod.POST, value ="/addProject")
     public Response<TbProject> addProject(@RequestBody @Validated ProjectForm projectForm) {
-        System.out.println(projectForm);
         return Response.success(ResStatus.SUCCESS.getMessage(),projectService.addProject(projectForm));
     };
 
@@ -40,8 +39,8 @@ public class ProjectController {
         return Response.success(ResStatus.SUCCESS.getMessage(),projectService.updateProject(projectForm));
     };
 
-    @RequestMapping(method = RequestMethod.DELETE, value ="/deleteProject")
-    public Response<TbProject> deleteProject(@RequestParam Integer id) {
+    @RequestMapping(method = RequestMethod.DELETE, value ="/logicalDeleteProject")
+    public Response<TbProject> logicalDeleteProject(@RequestParam Integer id) {
         return Response.success(ResStatus.SUCCESS.getMessage(),projectService.logicalDeleteProject(id));
     };
 }

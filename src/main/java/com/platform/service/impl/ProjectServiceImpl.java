@@ -33,7 +33,7 @@ public class ProjectServiceImpl extends ServiceImpl<TbProjectMapper,TbProject> i
         if (projectForm.getProjectName() != null){
             queryWrapper.like("project_name",projectForm.getProjectName());
         }
-        queryWrapper.eq("status",true);
+        queryWrapper.eq("is_delete",false);
         IPage<TbProject> page = baseMapper.selectPage(new Page<>(projectForm.getPageIndex(), projectForm.getPageSize()),queryWrapper);
         return new PageResult().setResult(page.getRecords()).setTotalElement(page.getTotal());
     }
@@ -56,7 +56,7 @@ public class ProjectServiceImpl extends ServiceImpl<TbProjectMapper,TbProject> i
     public boolean logicalDeleteProject(Integer id) {
         TbProject tbProject = new TbProject();
         tbProject.setId(id);
-        tbProject.setStatus(false);
+        tbProject.setIsDelete(true);
         return this.updateById(tbProject);
     }
 }

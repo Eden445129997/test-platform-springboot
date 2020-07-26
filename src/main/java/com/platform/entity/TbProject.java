@@ -24,7 +24,4 @@ public class TbProject extends BaseEntity implements Serializable {
 
     private String projectLeader;
 
-    private Boolean status;
-
-
 }

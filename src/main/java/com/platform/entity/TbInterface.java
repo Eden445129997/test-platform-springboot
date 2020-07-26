@@ -28,8 +28,6 @@ public class TbInterface extends BaseEntity implements Serializable {
 
     private String text;
 
-    private Boolean status;
-
     private String defaultData;
 
 }

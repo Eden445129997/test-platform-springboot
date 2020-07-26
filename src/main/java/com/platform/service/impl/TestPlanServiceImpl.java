@@ -10,7 +10,11 @@ import com.platform.entity.TbTestPlan;
 import com.platform.form.TestPlanForm;
 import com.platform.service.TestPlanService;
 import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+@Service
+@Transactional
 public class TestPlanServiceImpl extends ServiceImpl<TbTestPlanMapper, TbTestPlan> implements TestPlanService {
     @Override
     public PageResult<TbTestPlan> queryTestPlanByName(TestPlanForm testPlanForm) {
@@ -18,7 +22,7 @@ public class TestPlanServiceImpl extends ServiceImpl<TbTestPlanMapper, TbTestPla
         if (testPlanForm.getPlanName() != null){
             queryWrapper.like("plan_name",testPlanForm.getPlanName());
         }
-        queryWrapper.eq("status",true);
+        queryWrapper.eq("is_delete",false);
         IPage<TbTestPlan> page = baseMapper.selectPage(new Page<>(testPlanForm.getPageIndex(), testPlanForm.getPageSize()),queryWrapper);
         return new PageResult().setResult(page.getRecords()).setTotalElement(page.getTotal());
     }
@@ -41,7 +45,7 @@ public class TestPlanServiceImpl extends ServiceImpl<TbTestPlanMapper, TbTestPla
     public boolean logicalDeleteTestPlan(Integer id) {
         TbTestPlan tbTestPlan = new TbTestPlan();
         tbTestPlan.setId(id);
-        tbTestPlan.setStatus(false);
+        tbTestPlan.setIsDelete(true);
         return this.updateById(tbTestPlan);
     }
 }

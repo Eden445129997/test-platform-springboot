@@ -19,4 +19,10 @@ public class BaseEntity {
 
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
+
+    @TableField(fill = FieldFill.INSERT)
+    private Boolean isStatus;
+
+    @TableField(fill = FieldFill.INSERT)
+    private Boolean isDelete;
 }
