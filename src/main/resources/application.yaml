@@ -15,7 +15,7 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://111.229.54.5:3306/test_platform?useUnicode=true&amp;characterEncoding=UTF-8
+    url: jdbc:mysql://111.229.54.5:3306/test_platform?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true
 #    url: jdbc:mysql://10.113.248.203:3306/test_platform?useUnicode=true&amp;characterEncoding=utf8
     username: root
     password: root

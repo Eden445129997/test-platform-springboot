@@ -9,7 +9,7 @@ import java.util.List;
 public interface TestCaseService {
     PageResult<TbTestCase> queryTestCaseByName(TestCaseForm testCaseForm);
 
-    List<TbTestCase> queryTestCaseByPlanId(Integer planId);
+    List<Integer> TestSuitCaseOrder(Integer planId);
 
     boolean addTestCase(TestCaseForm testCaseForm);
 

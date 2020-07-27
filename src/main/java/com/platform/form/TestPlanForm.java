@@ -4,11 +4,13 @@ import com.platform.common.dto.form.BaseForm;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Data
 public class TestPlanForm extends BaseForm {
 
+    @NotNull
     private Integer projectId;
 
     @NotBlank(message="计划名称不能为空")

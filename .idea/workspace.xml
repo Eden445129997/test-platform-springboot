@@ -2,85 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22cbf895-c90d-43dc-98d5-9a155dd54473" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/platform/controller/TestCaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_annotation_3_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_annotation_3_0_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_3_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_3_0_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_extension_3_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_extension_3_0_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_2_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/platform/controller/TestCaseDetailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/platform/form/TestCaseDetailForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/TestCaseDetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/TestCaseDetailServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_annotation_3_0_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_annotation_3_2_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_3_0_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_3_2_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_extension_3_0_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_extension_3_2_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_2_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/common/dto/entity/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/common/dto/entity/BaseEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/common/dto/form/BaseForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/common/dto/form/BaseForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/config/MetaHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/config/MetaHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/config/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/config/MybatisPlusConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/controller/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/controller/ProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/controller/TestPlanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/controller/TestPlanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbBusiModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbBusiModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbCheckPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbCheckPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbHost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbProject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbTestCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbTestCaseDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbTestCaseDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbTestPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbTestPlan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/form/TestCaseForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/form/TestCaseForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/form/TestPlanForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/form/TestPlanForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/TestCaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/TestCaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/ProjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/ProjectServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/TestCaseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/TestCaseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/TestPlanServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/TestPlanServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/test-platform-java.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/platform/daoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/platform/serviceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/Response.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/dto/entity/BaseEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/dto/form/BaseForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/dto/page/BasePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/dto/page/PageResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/enums/IResponseEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/enums/ResStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/ApiServiceException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/ApiVersionException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/BaseException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/BizException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/DataImperfectException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/PunishedException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/RepeatNameException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/UnauthenticatedException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/VideoException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/utils/CamelUnderlineUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/config/MetaHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/config/MybatisPlusConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/controller/ProjectController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbApiTestReportDetailMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbApiTestReportMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbBusiModelMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbHostMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbInterfaceMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbProjectMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbTestCaseDetailMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbTestCaseMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbTestPlanMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/TbApiTestReport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/TbApiTestReportDetail.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/TbBusiModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/TbCheckPoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/TbHost.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/TbInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/TbProject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/TbTestCase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/TbTestCaseDetail.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/TbTestPlan.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/form/ProjectForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/form/TestPlanForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/platformApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/ProjectService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/TestPlanService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/ProjectServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/TestPlanServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/dto/form/BaseForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/common/dto/form/BaseForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/TbTestCaseDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/entity/TbTestCaseDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/form/TestPlanForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/form/TestPlanForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/TestCaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/service/TestCaseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/TestCaseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/service/impl/TestCaseServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/platform/daoTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-platform-java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/test-platform-java.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-platform-java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/test-platform-springboot.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,8 +110,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="serviceTest.queryTestCaseByPlanId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test-platform-springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.platform.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.platform" />
+      <option name="MAIN_CLASS_NAME" value="com.platform.serviceTest" />
+      <option name="METHOD_NAME" value="queryTestCaseByPlanId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="platformApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="test-platform-java" />
+      <module name="test-platform-springboot" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.platform.*" />
@@ -176,6 +142,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.platformApplication" />
+        <item itemvalue="JUnit.serviceTest.queryTestCaseByPlanId" />
         <item itemvalue="JUnit.StudyApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
@@ -215,7 +182,8 @@
       <workItem from="1595642894878" duration="7374000" />
       <workItem from="1595691836859" duration="5079000" />
       <workItem from="1595738086277" duration="8669000" />
-      <workItem from="1595772842552" duration="788000" />
+      <workItem from="1595772842552" duration="14475000" />
+      <workItem from="1595848944340" duration="5760000" />
     </task>
     <servers />
   </component>
@@ -252,12 +220,12 @@
     <state x="496" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1045@0.23.1792.1045" timestamp="1595518316412" />
     <state x="496" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1046@0.23.1792.1046" timestamp="1595518226150" />
     <state x="496" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/1792.23.1920.1057/0.23.1792.1045@0.23.1792.1045" timestamp="1595484472983" />
-    <state x="2261" y="257" key="#com.intellij.ide.util.MemberChooser" timestamp="1595670840627">
-      <screen x="1792" y="23" width="1920" height="1057" />
+    <state x="438" y="254" key="#com.intellij.ide.util.MemberChooser" timestamp="1595841120915">
+      <screen x="0" y="23" width="1792" height="1045" />
     </state>
     <state x="438" y="254" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1044@0.23.1792.1044" timestamp="1595517333128" />
-    <state x="438" y="254" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1045@0.23.1792.1045" timestamp="1595520144237" />
-    <state x="438" y="254" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1046@0.23.1792.1046" timestamp="1593918272054" />
+    <state x="438" y="254" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1045@0.23.1792.1045" timestamp="1595841120915" />
+    <state x="438" y="254" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1046@0.23.1792.1046" timestamp="1595838187191" />
     <state x="2261" y="257" key="#com.intellij.ide.util.MemberChooser/1792.23.1920.1057/0.23.1792.1047@1792.23.1920.1057" timestamp="1595670840627" />
     <state x="329" y="477" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1593595816537">
       <screen x="0" y="23" width="1792" height="1046" />
@@ -276,80 +244,80 @@
     </state>
     <state x="438" y="299" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1792.1047@0.23.1792.1047" timestamp="1594468299103" />
     <state x="438" y="300" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1792.1049@0.23.1792.1049" timestamp="1593831419027" />
-    <state width="1204" height="271" key="GridCell.Tab.0.bottom" timestamp="1595772823785">
-      <screen x="0" y="23" width="1792" height="1046" />
+    <state width="1750" height="214" key="GridCell.Tab.0.bottom" timestamp="1595861685019">
+      <screen x="0" y="23" width="1792" height="1045" />
     </state>
     <state width="1204" height="285" key="GridCell.Tab.0.bottom/0.23.1792.1044@0.23.1792.1044" timestamp="1595517402997" />
-    <state width="1204" height="285" key="GridCell.Tab.0.bottom/0.23.1792.1045@0.23.1792.1045" timestamp="1595517802980" />
-    <state width="1204" height="271" key="GridCell.Tab.0.bottom/0.23.1792.1046@0.23.1792.1046" timestamp="1595772823785" />
-    <state width="1204" height="271" key="GridCell.Tab.0.bottom/0.23.1792.1047@0.23.1792.1047" timestamp="1595756181925" />
-    <state width="1204" height="255" key="GridCell.Tab.0.bottom/0.23.1792.1048@0.23.1792.1048" timestamp="1595738978223" />
+    <state width="1750" height="214" key="GridCell.Tab.0.bottom/0.23.1792.1045@0.23.1792.1045" timestamp="1595861685019" />
+    <state width="1204" height="270" key="GridCell.Tab.0.bottom/0.23.1792.1046@0.23.1792.1046" timestamp="1595838617545" />
+    <state width="1204" height="270" key="GridCell.Tab.0.bottom/0.23.1792.1047@0.23.1792.1047" timestamp="1595834107926" />
+    <state width="1750" height="441" key="GridCell.Tab.0.bottom/0.23.1792.1048@0.23.1792.1048" timestamp="1595831368868" />
     <state width="1204" height="256" key="GridCell.Tab.0.bottom/0.23.1792.1049@0.23.1792.1049" timestamp="1595738516609" />
     <state width="1878" height="206" key="GridCell.Tab.0.bottom/1792.23.1920.1004/0.23.1792.1097@0.23.1792.1097" timestamp="1595411918913" />
-    <state width="1204" height="271" key="GridCell.Tab.0.center" timestamp="1595772823784">
-      <screen x="0" y="23" width="1792" height="1046" />
+    <state width="1750" height="214" key="GridCell.Tab.0.center" timestamp="1595861685018">
+      <screen x="0" y="23" width="1792" height="1045" />
     </state>
     <state width="1204" height="285" key="GridCell.Tab.0.center/0.23.1792.1044@0.23.1792.1044" timestamp="1595517402994" />
-    <state width="1204" height="285" key="GridCell.Tab.0.center/0.23.1792.1045@0.23.1792.1045" timestamp="1595517802979" />
-    <state width="1204" height="271" key="GridCell.Tab.0.center/0.23.1792.1046@0.23.1792.1046" timestamp="1595772823784" />
-    <state width="1204" height="271" key="GridCell.Tab.0.center/0.23.1792.1047@0.23.1792.1047" timestamp="1595756181925" />
-    <state width="1204" height="255" key="GridCell.Tab.0.center/0.23.1792.1048@0.23.1792.1048" timestamp="1595738978222" />
+    <state width="1750" height="214" key="GridCell.Tab.0.center/0.23.1792.1045@0.23.1792.1045" timestamp="1595861685018" />
+    <state width="1204" height="270" key="GridCell.Tab.0.center/0.23.1792.1046@0.23.1792.1046" timestamp="1595838617545" />
+    <state width="1204" height="270" key="GridCell.Tab.0.center/0.23.1792.1047@0.23.1792.1047" timestamp="1595834107925" />
+    <state width="1750" height="441" key="GridCell.Tab.0.center/0.23.1792.1048@0.23.1792.1048" timestamp="1595831368867" />
     <state width="1204" height="256" key="GridCell.Tab.0.center/0.23.1792.1049@0.23.1792.1049" timestamp="1595738516608" />
     <state width="1878" height="206" key="GridCell.Tab.0.center/1792.23.1920.1004/0.23.1792.1097@0.23.1792.1097" timestamp="1595411918912" />
-    <state width="1204" height="271" key="GridCell.Tab.0.left" timestamp="1595772823783">
-      <screen x="0" y="23" width="1792" height="1046" />
+    <state width="1750" height="214" key="GridCell.Tab.0.left" timestamp="1595861685017">
+      <screen x="0" y="23" width="1792" height="1045" />
     </state>
     <state width="1204" height="285" key="GridCell.Tab.0.left/0.23.1792.1044@0.23.1792.1044" timestamp="1595517402993" />
-    <state width="1204" height="285" key="GridCell.Tab.0.left/0.23.1792.1045@0.23.1792.1045" timestamp="1595517802978" />
-    <state width="1204" height="271" key="GridCell.Tab.0.left/0.23.1792.1046@0.23.1792.1046" timestamp="1595772823783" />
-    <state width="1204" height="271" key="GridCell.Tab.0.left/0.23.1792.1047@0.23.1792.1047" timestamp="1595756181924" />
-    <state width="1204" height="255" key="GridCell.Tab.0.left/0.23.1792.1048@0.23.1792.1048" timestamp="1595738978222" />
+    <state width="1750" height="214" key="GridCell.Tab.0.left/0.23.1792.1045@0.23.1792.1045" timestamp="1595861685017" />
+    <state width="1204" height="270" key="GridCell.Tab.0.left/0.23.1792.1046@0.23.1792.1046" timestamp="1595838617545" />
+    <state width="1204" height="270" key="GridCell.Tab.0.left/0.23.1792.1047@0.23.1792.1047" timestamp="1595834107925" />
+    <state width="1750" height="441" key="GridCell.Tab.0.left/0.23.1792.1048@0.23.1792.1048" timestamp="1595831368867" />
     <state width="1204" height="256" key="GridCell.Tab.0.left/0.23.1792.1049@0.23.1792.1049" timestamp="1595738516608" />
     <state width="1878" height="206" key="GridCell.Tab.0.left/1792.23.1920.1004/0.23.1792.1097@0.23.1792.1097" timestamp="1595411918912" />
-    <state width="1204" height="271" key="GridCell.Tab.0.right" timestamp="1595772823785">
-      <screen x="0" y="23" width="1792" height="1046" />
+    <state width="1750" height="214" key="GridCell.Tab.0.right" timestamp="1595861685018">
+      <screen x="0" y="23" width="1792" height="1045" />
     </state>
     <state width="1204" height="285" key="GridCell.Tab.0.right/0.23.1792.1044@0.23.1792.1044" timestamp="1595517402994" />
-    <state width="1204" height="285" key="GridCell.Tab.0.right/0.23.1792.1045@0.23.1792.1045" timestamp="1595517802979" />
-    <state width="1204" height="271" key="GridCell.Tab.0.right/0.23.1792.1046@0.23.1792.1046" timestamp="1595772823785" />
-    <state width="1204" height="271" key="GridCell.Tab.0.right/0.23.1792.1047@0.23.1792.1047" timestamp="1595756181925" />
-    <state width="1204" height="255" key="GridCell.Tab.0.right/0.23.1792.1048@0.23.1792.1048" timestamp="1595738978223" />
+    <state width="1750" height="214" key="GridCell.Tab.0.right/0.23.1792.1045@0.23.1792.1045" timestamp="1595861685018" />
+    <state width="1204" height="270" key="GridCell.Tab.0.right/0.23.1792.1046@0.23.1792.1046" timestamp="1595838617545" />
+    <state width="1204" height="270" key="GridCell.Tab.0.right/0.23.1792.1047@0.23.1792.1047" timestamp="1595834107925" />
+    <state width="1750" height="441" key="GridCell.Tab.0.right/0.23.1792.1048@0.23.1792.1048" timestamp="1595831368868" />
     <state width="1204" height="256" key="GridCell.Tab.0.right/0.23.1792.1049@0.23.1792.1049" timestamp="1595738516609" />
     <state width="1878" height="206" key="GridCell.Tab.0.right/1792.23.1920.1004/0.23.1792.1097@0.23.1792.1097" timestamp="1595411918913" />
-    <state width="1204" height="271" key="GridCell.Tab.1.bottom" timestamp="1595772823786">
-      <screen x="0" y="23" width="1792" height="1046" />
+    <state width="1204" height="268" key="GridCell.Tab.1.bottom" timestamp="1595861562299">
+      <screen x="0" y="23" width="1792" height="1045" />
     </state>
     <state width="1204" height="285" key="GridCell.Tab.1.bottom/0.23.1792.1044@0.23.1792.1044" timestamp="1595517402998" />
-    <state width="1204" height="285" key="GridCell.Tab.1.bottom/0.23.1792.1045@0.23.1792.1045" timestamp="1595517802981" />
-    <state width="1204" height="271" key="GridCell.Tab.1.bottom/0.23.1792.1046@0.23.1792.1046" timestamp="1595772823786" />
-    <state width="1204" height="271" key="GridCell.Tab.1.bottom/0.23.1792.1047@0.23.1792.1047" timestamp="1595756181927" />
+    <state width="1204" height="268" key="GridCell.Tab.1.bottom/0.23.1792.1045@0.23.1792.1045" timestamp="1595861562299" />
+    <state width="1204" height="270" key="GridCell.Tab.1.bottom/0.23.1792.1046@0.23.1792.1046" timestamp="1595838617546" />
+    <state width="1204" height="270" key="GridCell.Tab.1.bottom/0.23.1792.1047@0.23.1792.1047" timestamp="1595834107926" />
     <state width="1204" height="255" key="GridCell.Tab.1.bottom/0.23.1792.1048@0.23.1792.1048" timestamp="1595738978224" />
     <state width="1204" height="256" key="GridCell.Tab.1.bottom/0.23.1792.1049@0.23.1792.1049" timestamp="1595738516610" />
-    <state width="1204" height="271" key="GridCell.Tab.1.center" timestamp="1595772823786">
-      <screen x="0" y="23" width="1792" height="1046" />
+    <state width="1204" height="268" key="GridCell.Tab.1.center" timestamp="1595861562298">
+      <screen x="0" y="23" width="1792" height="1045" />
     </state>
     <state width="1204" height="285" key="GridCell.Tab.1.center/0.23.1792.1044@0.23.1792.1044" timestamp="1595517402998" />
-    <state width="1204" height="285" key="GridCell.Tab.1.center/0.23.1792.1045@0.23.1792.1045" timestamp="1595517802980" />
-    <state width="1204" height="271" key="GridCell.Tab.1.center/0.23.1792.1046@0.23.1792.1046" timestamp="1595772823786" />
-    <state width="1204" height="271" key="GridCell.Tab.1.center/0.23.1792.1047@0.23.1792.1047" timestamp="1595756181926" />
+    <state width="1204" height="268" key="GridCell.Tab.1.center/0.23.1792.1045@0.23.1792.1045" timestamp="1595861562298" />
+    <state width="1204" height="270" key="GridCell.Tab.1.center/0.23.1792.1046@0.23.1792.1046" timestamp="1595838617545" />
+    <state width="1204" height="270" key="GridCell.Tab.1.center/0.23.1792.1047@0.23.1792.1047" timestamp="1595834107926" />
     <state width="1204" height="255" key="GridCell.Tab.1.center/0.23.1792.1048@0.23.1792.1048" timestamp="1595738978224" />
     <state width="1204" height="256" key="GridCell.Tab.1.center/0.23.1792.1049@0.23.1792.1049" timestamp="1595738516609" />
-    <state width="1204" height="271" key="GridCell.Tab.1.left" timestamp="1595772823785">
-      <screen x="0" y="23" width="1792" height="1046" />
+    <state width="1204" height="268" key="GridCell.Tab.1.left" timestamp="1595861562298">
+      <screen x="0" y="23" width="1792" height="1045" />
     </state>
     <state width="1204" height="285" key="GridCell.Tab.1.left/0.23.1792.1044@0.23.1792.1044" timestamp="1595517402998" />
-    <state width="1204" height="285" key="GridCell.Tab.1.left/0.23.1792.1045@0.23.1792.1045" timestamp="1595517802980" />
-    <state width="1204" height="271" key="GridCell.Tab.1.left/0.23.1792.1046@0.23.1792.1046" timestamp="1595772823785" />
-    <state width="1204" height="271" key="GridCell.Tab.1.left/0.23.1792.1047@0.23.1792.1047" timestamp="1595756181926" />
+    <state width="1204" height="268" key="GridCell.Tab.1.left/0.23.1792.1045@0.23.1792.1045" timestamp="1595861562298" />
+    <state width="1204" height="270" key="GridCell.Tab.1.left/0.23.1792.1046@0.23.1792.1046" timestamp="1595838617545" />
+    <state width="1204" height="270" key="GridCell.Tab.1.left/0.23.1792.1047@0.23.1792.1047" timestamp="1595834107926" />
     <state width="1204" height="255" key="GridCell.Tab.1.left/0.23.1792.1048@0.23.1792.1048" timestamp="1595738978223" />
     <state width="1204" height="256" key="GridCell.Tab.1.left/0.23.1792.1049@0.23.1792.1049" timestamp="1595738516609" />
-    <state width="1204" height="271" key="GridCell.Tab.1.right" timestamp="1595772823786">
-      <screen x="0" y="23" width="1792" height="1046" />
+    <state width="1204" height="268" key="GridCell.Tab.1.right" timestamp="1595861562299">
+      <screen x="0" y="23" width="1792" height="1045" />
     </state>
     <state width="1204" height="285" key="GridCell.Tab.1.right/0.23.1792.1044@0.23.1792.1044" timestamp="1595517402998" />
-    <state width="1204" height="285" key="GridCell.Tab.1.right/0.23.1792.1045@0.23.1792.1045" timestamp="1595517802980" />
-    <state width="1204" height="271" key="GridCell.Tab.1.right/0.23.1792.1046@0.23.1792.1046" timestamp="1595772823786" />
-    <state width="1204" height="271" key="GridCell.Tab.1.right/0.23.1792.1047@0.23.1792.1047" timestamp="1595756181926" />
+    <state width="1204" height="268" key="GridCell.Tab.1.right/0.23.1792.1045@0.23.1792.1045" timestamp="1595861562299" />
+    <state width="1204" height="270" key="GridCell.Tab.1.right/0.23.1792.1046@0.23.1792.1046" timestamp="1595838617546" />
+    <state width="1204" height="270" key="GridCell.Tab.1.right/0.23.1792.1047@0.23.1792.1047" timestamp="1595834107926" />
     <state width="1204" height="255" key="GridCell.Tab.1.right/0.23.1792.1048@0.23.1792.1048" timestamp="1595738978224" />
     <state width="1204" height="256" key="GridCell.Tab.1.right/0.23.1792.1049@0.23.1792.1049" timestamp="1595738516610" />
     <state width="1204" height="255" key="GridCell.Tab.2.bottom" timestamp="1595738808267">
@@ -394,9 +362,10 @@
     </state>
     <state x="118" y="164" key="new project wizard/0.23.1792.1020@0.23.1792.1020" timestamp="1594488681538" />
     <state x="118" y="168" key="new project wizard/0.23.1792.1046@0.23.1792.1046" timestamp="1593595746867" />
-    <state x="365" y="255" width="670" height="676" key="search.everywhere.popup" timestamp="1594002164694">
-      <screen x="0" y="23" width="1792" height="1045" />
+    <state x="365" y="255" width="670" height="678" key="search.everywhere.popup" timestamp="1595833748672">
+      <screen x="0" y="23" width="1792" height="1047" />
     </state>
     <state x="365" y="255" width="670" height="676" key="search.everywhere.popup/0.23.1792.1045@0.23.1792.1045" timestamp="1594002164694" />
+    <state x="365" y="255" width="670" height="678" key="search.everywhere.popup/0.23.1792.1047@0.23.1792.1047" timestamp="1595833748672" />
   </component>
 </project>

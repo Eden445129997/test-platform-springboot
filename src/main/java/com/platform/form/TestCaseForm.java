@@ -19,4 +19,6 @@ public class TestCaseForm extends BaseForm {
 
     @Size(max = 100, message = "用例节点描述不能超过100个字符")
     private String text;
+
+    // form中去除sort字段
 }

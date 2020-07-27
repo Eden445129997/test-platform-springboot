@@ -32,6 +32,8 @@ public class TbTestCaseDetail extends BaseEntity implements Serializable {
 
     private String headers;
 
+    private String parames;
+
     private String data;
 
     private String text;

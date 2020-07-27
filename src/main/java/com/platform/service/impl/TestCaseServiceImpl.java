@@ -13,6 +13,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -41,11 +42,19 @@ public class TestCaseServiceImpl extends ServiceImpl<TbTestCaseMapper, TbTestCas
      * 排序：根据sort倒序排序，id正序排序
      */
     @Override
-    public List<TbTestCase> queryTestCaseByPlanId(Integer planId) {
+    public List<Integer> TestSuitCaseOrder(Integer planId) {
         QueryWrapper<TbTestCase> queryWrapper = new QueryWrapper<>();
+        List<Integer> orderTestCaseIdListOrder = new ArrayList();
+        // 查询id
+        queryWrapper.select("id");
         queryWrapper.eq("plan_id", planId).eq("is_delete", false).eq("is_status", true);
         queryWrapper.orderByDesc("sort").orderByAsc("id");
-        return baseMapper.selectList(queryWrapper);
+        List<TbTestCase> tbTestCaseList = baseMapper.selectList(queryWrapper);
+        // 装进list
+        for (TbTestCase tbTestCase : tbTestCaseList ) {
+            orderTestCaseIdListOrder.add(tbTestCase.getId());
+        }
+        return orderTestCaseIdListOrder;
     }
 
     @Override

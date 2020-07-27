@@ -8,7 +8,7 @@ public class BaseForm extends BasePage {
 
     private Integer id;
 
-    private boolean status;
+    private boolean isStatus;
 
-    private boolean isDelete;
+//    private boolean isDelete;
 }
