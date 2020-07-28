@@ -32,7 +32,7 @@ public class TestCaseServiceImpl extends ServiceImpl<TbTestCaseMapper, TbTestCas
         if (testCaseForm.getCaseName() != null){
             queryWrapper.like("case_name",testCaseForm.getCaseName());
         }
-        queryWrapper.eq("is_delete",false).orderByDesc("create_time");
+        queryWrapper.eq("is_delete",false).orderByAsc("id");
         IPage<TbTestCase> page = baseMapper.selectPage(new Page<>(testCaseForm.getPageIndex(), testCaseForm.getPageSize()),queryWrapper);
         return new PageResult().setResult(page.getRecords()).setTotalElement(page.getTotal());
     }

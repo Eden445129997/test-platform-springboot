@@ -4,6 +4,7 @@ import com.platform.common.dto.form.BaseForm;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Data
 public class TestCaseDetailForm extends BaseForm {
@@ -38,6 +39,7 @@ public class TestCaseDetailForm extends BaseForm {
     //默认值写在service层里
     private String data;
 
+    @Size(max = 100, message = "用例节点描述不能超过100个字符")
     private String text;
 
     // form中去除sort字段，默认值写在service层里

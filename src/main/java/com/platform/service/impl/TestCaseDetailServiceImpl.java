@@ -22,7 +22,7 @@ public class TestCaseDetailServiceImpl extends ServiceImpl<TbTestCaseDetailMappe
     public PageResult<TbTestCaseDetail> queryTestCaseDetailByCaseId(Integer caseId) {
         QueryWrapper<TbTestCaseDetail> queryWrapper = new QueryWrapper<>();
         BasePage basePage = new BasePage();
-        queryWrapper.eq("case_id", caseId).eq("is_delete", false).eq("is_status", true);
+        queryWrapper.eq("case_id", caseId).eq("is_delete", false);
         queryWrapper.orderByDesc("sort").orderByAsc("id");
         IPage<TbTestCaseDetail> page = baseMapper.selectPage(new Page<>(basePage.getPageIndex(), basePage.getPageSize()), queryWrapper);
         return new PageResult().setResult(page.getRecords()).setTotalElement(page.getTotal());

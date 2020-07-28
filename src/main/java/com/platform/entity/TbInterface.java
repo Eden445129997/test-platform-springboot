@@ -29,5 +29,4 @@ public class TbInterface extends BaseEntity implements Serializable {
     private String text;
 
     private String defaultData;
-
 }

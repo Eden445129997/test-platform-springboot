@@ -22,7 +22,7 @@ public class TestPlanServiceImpl extends ServiceImpl<TbTestPlanMapper, TbTestPla
         if (testPlanForm.getPlanName() != null){
             queryWrapper.like("plan_name",testPlanForm.getPlanName());
         }
-        queryWrapper.eq("is_delete",false);
+        queryWrapper.eq("is_delete",false).orderByDesc("id");
         IPage<TbTestPlan> page = baseMapper.selectPage(new Page<>(testPlanForm.getPageIndex(), testPlanForm.getPageSize()),queryWrapper);
         return new PageResult().setResult(page.getRecords()).setTotalElement(page.getTotal());
     }

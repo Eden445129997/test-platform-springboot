@@ -33,7 +33,7 @@ public class ProjectServiceImpl extends ServiceImpl<TbProjectMapper,TbProject> i
         if (projectForm.getProjectName() != null){
             queryWrapper.like("project_name",projectForm.getProjectName());
         }
-        queryWrapper.eq("is_delete",false);
+        queryWrapper.eq("is_delete",false).orderByAsc("id");
         IPage<TbProject> page = baseMapper.selectPage(new Page<>(projectForm.getPageIndex(), projectForm.getPageSize()),queryWrapper);
         return new PageResult().setResult(page.getRecords()).setTotalElement(page.getTotal());
     }
