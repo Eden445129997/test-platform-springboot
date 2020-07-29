@@ -28,7 +28,7 @@ public class ProjectServiceImpl extends ServiceImpl<TbProjectMapper,TbProject> i
      * @param projectForm
      */
     @Override
-    public PageResult<TbProject> queryProjectByName(ProjectForm projectForm) {
+    public PageResult<TbProject> queryProjectByKeyword(ProjectForm projectForm) {
         QueryWrapper<TbProject> queryWrapper = new QueryWrapper<>();
         if (projectForm.getProjectName() != null){
             queryWrapper.like("project_name",projectForm.getProjectName());
@@ -46,7 +46,7 @@ public class ProjectServiceImpl extends ServiceImpl<TbProjectMapper,TbProject> i
     }
 
     @Override
-    public boolean updateProject(ProjectForm projectForm) {
+    public boolean updateProjectById(ProjectForm projectForm) {
         TbProject tbProject = new TbProject();
         BeanUtils.copyProperties(projectForm, tbProject);
         return this.updateById(tbProject);

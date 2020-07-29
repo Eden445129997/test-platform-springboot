@@ -10,7 +10,7 @@ public interface TestCaseDetailService {
 
     boolean addTestCaseDetail(TestCaseDetailForm testCaseDetailForm);
 
-    boolean updateTestCaseDetail(TestCaseDetailForm testCaseDetailForm);
+    boolean updateTestCaseDetailById(TestCaseDetailForm testCaseDetailForm);
 
     boolean logicalDeleteTestCaseDetail(Integer id);
 }

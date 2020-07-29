@@ -5,11 +5,11 @@ import com.platform.entity.TbTestPlan;
 import com.platform.form.TestPlanForm;
 
 public interface TestPlanService {
-    PageResult<TbTestPlan> queryTestPlanByName(TestPlanForm testPlanForm);
+    PageResult<TbTestPlan> queryTestPlanByKeyword(TestPlanForm testPlanForm);
 
     boolean addTestPlan(TestPlanForm testPlanForm);
 
-    boolean updateTestPlan(TestPlanForm testPlanForm);
+    boolean updateTestPlanById(TestPlanForm testPlanForm);
 
     boolean logicalDeleteTestPlan(Integer id);
 }

@@ -18,10 +18,18 @@ import java.io.Serializable;
 @TableName("tb_project")
 public class TbProject extends BaseEntity implements Serializable {
 
+    /**
+     * 项目名称
+     */
     private String projectName;
 
+    /**
+     * 项目描述
+     */
     private String text;
 
+    /**
+     * 项目负责人
+     */
     private String projectLeader;
-
 }

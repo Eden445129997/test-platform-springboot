@@ -7,13 +7,13 @@ import com.platform.form.TestCaseForm;
 import java.util.List;
 
 public interface TestCaseService {
-    PageResult<TbTestCase> queryTestCaseByName(TestCaseForm testCaseForm);
+    PageResult<TbTestCase> queryTestCasebyKeyword(TestCaseForm testCaseForm);
 
     List<Integer> TestSuitCaseOrder(Integer planId);
 
     boolean addTestCase(TestCaseForm testCaseForm);
 
-    boolean updateTestCase(TestCaseForm testCaseForm);
+    boolean updateTestCaseById(TestCaseForm testCaseForm);
 
     boolean logicalDeleteTestCase(Integer id);
 }

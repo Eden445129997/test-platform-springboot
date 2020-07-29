@@ -9,16 +9,22 @@ import javax.validation.constraints.Size;
 @Data
 public class TestPlanForm extends BaseForm {
 
+    /**
+     * 关联的项目id（非必填）
+     */
     private Integer projectId;
 
+    /**
+     * 测试计划名称
+     * @required
+     */
     @NotBlank(message="计划名称不能为空")
     @Size(max = 10, message = "计划名称不能超过10个字符")
     private String planName;
 
-    @NotBlank(message="创建者人不能为空")
-    @Size(max = 10, message = "创建者不能超过10个字符")
-    private String creater;
-
+    /**
+     * 测试计划描述
+     */
     @Size(max = 100, message = "测试计划描述不能超过100个字符")
     private String text;
 }

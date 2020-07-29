@@ -16,11 +16,18 @@ import java.io.Serializable;
 @TableName("tb_test_plan")
 public class TbTestPlan extends BaseEntity implements Serializable {
 
+    /**
+     * 关联的项目id
+     */
     private Integer projectId;
 
+    /**
+     * 测试计划名称
+     */
     private String planName;
 
-    private String creater;
-
+    /**
+     * 测试计划描述
+     */
     private String text;
 }

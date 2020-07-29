@@ -27,8 +27,11 @@ public class TestCaseServiceImpl extends ServiceImpl<TbTestCaseMapper, TbTestCas
      * 排序：创建时间倒序排序
      */
     @Override
-    public PageResult<TbTestCase> queryTestCaseByName(TestCaseForm testCaseForm) {
+    public PageResult<TbTestCase> queryTestCasebyKeyword(TestCaseForm testCaseForm) {
         QueryWrapper<TbTestCase> queryWrapper = new QueryWrapper<>();
+        if (testCaseForm.getPlanId() != null) {
+            queryWrapper.eq("plan_id",testCaseForm.getPlanId());
+        }
         if (testCaseForm.getCaseName() != null){
             queryWrapper.like("case_name",testCaseForm.getCaseName());
         }
@@ -66,7 +69,7 @@ public class TestCaseServiceImpl extends ServiceImpl<TbTestCaseMapper, TbTestCas
     }
 
     @Override
-    public boolean updateTestCase(TestCaseForm testCaseForm) {
+    public boolean updateTestCaseById(TestCaseForm testCaseForm) {
         TbTestCase tbTestCase = new TbTestCase();
         BeanUtils.copyProperties(testCaseForm, tbTestCase);
         return this.updateById(tbTestCase);

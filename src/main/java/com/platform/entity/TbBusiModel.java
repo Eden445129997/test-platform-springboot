@@ -16,10 +16,18 @@ import java.io.Serializable;
 @TableName("tb_busi_model")
 public class TbBusiModel extends BaseEntity implements Serializable {
 
+    /**
+     * 关联的项目id
+     */
     private Integer projectId;
 
+    /**
+     * 业务名称
+     */
     private String busiName;
 
+    /**
+     * 业务描述
+     */
     private String text;
-
 }

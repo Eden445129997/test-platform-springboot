@@ -9,7 +9,7 @@ public interface InterfaceService {
 
     boolean addInterface(InterfaceForm interfaceForm);
 
-    boolean updateInterface(InterfaceForm interfaceForm);
+    boolean updateInterfaceById(InterfaceForm interfaceForm);
 
     boolean logicalDeleteInterface(Integer id);
 }

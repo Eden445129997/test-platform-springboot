@@ -32,6 +32,13 @@
 
   <dependencies>
 
+    <!-- smart-doc依赖，生成接口文档依赖 -->
+    <dependency>
+      <groupId>com.github.shalousun</groupId>
+      <artifactId>smart-doc</artifactId>
+      <version>1.8.9</version>
+      <scope>test</scope>
+    </dependency>
     <!-- 导入Spirng Boot start 所需的jar包，自动配置,SpringBoot Mybatis 依赖-->
     <dependency>
       <groupId>org.springframework.boot</groupId>

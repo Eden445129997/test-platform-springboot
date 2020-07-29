@@ -4,9 +4,7 @@ import com.platform.common.utils.CamelUnderlineUtils;
 import org.apache.commons.lang.StringUtils;
 
 /**
- * @description: 分页基类
- * @author: 赵云
- * @create: 2019-08-10
+ * 分页基类
  */
 public class BasePage {
 
@@ -24,10 +22,12 @@ public class BasePage {
 
     /**
      * 排序字段名
+     * @ignore
      */
     private String sortName;
     /**
      * 排序类型（asc 或 desc）
+     * @ignore
      */
     private String sortType;
 
@@ -48,10 +48,6 @@ public class BasePage {
     }
     /**
      * 设置不分页
-     *
-     * @author lingyuwang
-     * @date 2020-01-11 10:48
-     * @since 1.0.4
      */
     public void setNoPage() {
         this.pageIndex = -1;
@@ -60,11 +56,6 @@ public class BasePage {
 
     /**
      * 是否分页
-     *
-     * @return boolean
-     * @author lingyuwang
-     * @date 2020-01-11 12:31
-     * @since 1.0.4
      */
     public boolean isNoPage() {
         return this.pageIndex != null && this.pageIndex == -1

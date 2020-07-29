@@ -17,8 +17,11 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class TestPlanServiceImpl extends ServiceImpl<TbTestPlanMapper, TbTestPlan> implements TestPlanService {
     @Override
-    public PageResult<TbTestPlan> queryTestPlanByName(TestPlanForm testPlanForm) {
+    public PageResult<TbTestPlan> queryTestPlanByKeyword(TestPlanForm testPlanForm) {
         QueryWrapper<TbTestPlan> queryWrapper = new QueryWrapper<>();
+        if (testPlanForm.getProjectId() != null){
+            queryWrapper.eq("project_id",testPlanForm.getProjectId());
+        }
         if (testPlanForm.getPlanName() != null){
             queryWrapper.like("plan_name",testPlanForm.getPlanName());
         }
@@ -35,7 +38,7 @@ public class TestPlanServiceImpl extends ServiceImpl<TbTestPlanMapper, TbTestPla
     }
 
     @Override
-    public boolean updateTestPlan(TestPlanForm testPlanForm) {
+    public boolean updateTestPlanById(TestPlanForm testPlanForm) {
         TbTestPlan tbTestPlan = new TbTestPlan();
         BeanUtils.copyProperties(testPlanForm, tbTestPlan);
         return this.updateById(tbTestPlan);

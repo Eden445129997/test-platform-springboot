@@ -7,11 +7,11 @@ import com.platform.form.ProjectForm;
 
 public interface ProjectService extends IService<TbProject> {
 
-    PageResult<TbProject> queryProjectByName(ProjectForm projectForm);
+    PageResult<TbProject> queryProjectByKeyword(ProjectForm projectForm);
 
     boolean addProject(ProjectForm projectForm);
 
-    boolean updateProject(ProjectForm projectForm);
+    boolean updateProjectById(ProjectForm projectForm);
 
     boolean logicalDeleteProject(Integer id);
 }

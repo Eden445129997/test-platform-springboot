@@ -47,7 +47,7 @@ public class InterfaceServiceImpl extends ServiceImpl<TbInterfaceMapper, TbInter
     }
 
     @Override
-    public boolean updateInterface(InterfaceForm interfaceForm) {
+    public boolean updateInterfaceById(InterfaceForm interfaceForm) {
         TbInterface tbInterface = new TbInterface();
         BeanUtils.copyProperties(interfaceForm, tbInterface);
         return this.updateById(tbInterface);

@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * 项目
+ */
 @RestController
 //@RequestMapping("/project")
 public class ProjectController {
@@ -19,26 +22,42 @@ public class ProjectController {
     @Autowired
     private ProjectService projectService;
 
-    @RequestMapping(method = RequestMethod.GET,value = "/queryProjectByName")
-    public Response<List<TbProject>> queryProjectByName(ProjectForm projectForm){
+    /**
+     * 根据（ 项目名、负责人 ）分页模糊查询
+     */
+    @RequestMapping(method = RequestMethod.GET,value = "/queryProjectByKeyword")
+    public Response<List<TbProject>> queryProjectByKeyword(ProjectForm projectForm){
         PageResult<TbProject> result;
-        result = projectService.queryProjectByName(projectForm);
+        result = projectService.queryProjectByKeyword(projectForm);
         return Response.success(ResStatus.SUCCESS.getMessage(),result.getResult(),result.getTotalElement());
     }
 
+    /**
+     * 添加项目
+     */
     @RequestMapping(method = RequestMethod.POST, value ="/addProject")
     public Response<TbProject> addProject(@RequestBody @Validated ProjectForm projectForm) {
         return Response.success(ResStatus.SUCCESS.getMessage(),projectService.addProject(projectForm));
     };
 
-    @RequestMapping(method = RequestMethod.PUT, value ="/updateProject")
-    public Response<TbProject> updateProject(@RequestBody ProjectForm projectForm) {
+    /**
+     * 根据id更新项目
+     * @param projectForm
+     * @return
+     */
+    @RequestMapping(method = RequestMethod.PUT, value ="/updateProjectById")
+    public Response<TbProject> updateProjectById(@RequestBody ProjectForm projectForm) {
         if (projectForm.getId() == null) {
             return Response.error(ResStatus.PARAMETER_ERROR);
         }
-        return Response.success(ResStatus.SUCCESS.getMessage(),projectService.updateProject(projectForm));
+        return Response.success(ResStatus.SUCCESS.getMessage(),projectService.updateProjectById(projectForm));
     };
 
+    /**
+     * 逻辑删除项目
+     * @param id
+     * @return
+     */
     @RequestMapping(method = RequestMethod.DELETE, value ="/logicalDeleteProject")
     public Response<TbProject> logicalDeleteProject(@RequestParam Integer id) {
         return Response.success(ResStatus.SUCCESS.getMessage(),projectService.logicalDeleteProject(id));

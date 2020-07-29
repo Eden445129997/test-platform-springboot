@@ -62,7 +62,7 @@ public class TestCaseDetailServiceImpl extends ServiceImpl<TbTestCaseDetailMappe
     }
 
     @Override
-    public boolean updateTestCaseDetail(TestCaseDetailForm testCaseDetailForm) {
+    public boolean updateTestCaseDetailById(TestCaseDetailForm testCaseDetailForm) {
         TbTestCaseDetail tbTestCaseDetail = new TbTestCaseDetail();
         BeanUtils.copyProperties(testCaseDetailForm, tbTestCaseDetail);
         return this.updateById(tbTestCaseDetail);
