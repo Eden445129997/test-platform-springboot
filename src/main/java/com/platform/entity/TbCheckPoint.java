@@ -22,12 +22,12 @@ public class TbCheckPoint extends BaseEntity implements Serializable {
     private Integer caseDetailId;
 
     /**
-     * 检查对象（jsonpath表达式）
+     * 校验对象（jsonpath表达式）
      */
     private String checkObject;
 
     /**
-     * 检查方法
+     * 校验方法
      */
     private String checkMethod;
 

@@ -16,6 +16,12 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional
 public class TestPlanServiceImpl extends ServiceImpl<TbTestPlanMapper, TbTestPlan> implements TestPlanService {
+
+    /**
+     * 根据关键字查询测试计划
+     * @param testPlanForm
+     * @return
+     */
     @Override
     public PageResult<TbTestPlan> queryTestPlanByKeyword(TestPlanForm testPlanForm) {
         QueryWrapper<TbTestPlan> queryWrapper = new QueryWrapper<>();
@@ -30,6 +36,11 @@ public class TestPlanServiceImpl extends ServiceImpl<TbTestPlanMapper, TbTestPla
         return new PageResult().setResult(page.getRecords()).setTotalElement(page.getTotal());
     }
 
+    /**
+     * 添加测试计划
+     * @param testPlanForm
+     * @return
+     */
     @Override
     public boolean addTestPlan(TestPlanForm testPlanForm) {
         TbTestPlan tbTestPlan = new TbTestPlan();
@@ -37,6 +48,11 @@ public class TestPlanServiceImpl extends ServiceImpl<TbTestPlanMapper, TbTestPla
         return this.save(tbTestPlan);
     }
 
+    /**
+     * 根据id更新测试计划
+     * @param testPlanForm
+     * @return
+     */
     @Override
     public boolean updateTestPlanById(TestPlanForm testPlanForm) {
         TbTestPlan tbTestPlan = new TbTestPlan();
@@ -44,6 +60,11 @@ public class TestPlanServiceImpl extends ServiceImpl<TbTestPlanMapper, TbTestPla
         return this.updateById(tbTestPlan);
     }
 
+    /**
+     * 逻辑删除测试计划
+     * @param id
+     * @return
+     */
     @Override
     public boolean logicalDeleteTestPlan(Integer id) {
         TbTestPlan tbTestPlan = new TbTestPlan();
