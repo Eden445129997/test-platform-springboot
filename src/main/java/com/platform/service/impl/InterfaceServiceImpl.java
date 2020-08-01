@@ -6,8 +6,8 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.platform.common.dto.page.PageResult;
 import com.platform.dao.TbInterfaceMapper;
-import com.platform.entity.TbInterface;
-import com.platform.form.InterfaceForm;
+import com.platform.entity.domain.TbInterface;
+import com.platform.entity.vo.InterfaceVo;
 import com.platform.service.InterfaceService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
@@ -17,39 +17,40 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class InterfaceServiceImpl extends ServiceImpl<TbInterfaceMapper, TbInterface> implements InterfaceService {
     @Override
-    public PageResult<TbInterface> queryInterfaceByKeyword(InterfaceForm interfaceForm) {
+    public PageResult<TbInterface> queryInterfaceByKeyword(InterfaceVo interfaceVo) {
         QueryWrapper<TbInterface> queryWrapper = new QueryWrapper<>();
-        if (interfaceForm.getProjectId() != null){
-            queryWrapper.eq("project_id",interfaceForm.getProjectId());
+        if (interfaceVo.getProjectId() != null){
+            queryWrapper.eq("project_id", interfaceVo.getProjectId());
         }
-        if (interfaceForm.getBusiId() != null){
-            queryWrapper.eq("busi_id",interfaceForm.getBusiId());
+        if (interfaceVo.getBusiId() != null){
+            queryWrapper.eq("busi_id", interfaceVo.getBusiId());
         }
-        if (interfaceForm.getApiName() != null){
-            queryWrapper.like("api_name",interfaceForm.getApiName());
+        if (interfaceVo.getApiName() != null){
+            queryWrapper.like("api_name", interfaceVo.getApiName());
         }
-        if (interfaceForm.getMethod() != null){
-            queryWrapper.eq("method",interfaceForm.getMethod());
+        if (interfaceVo.getMethod() != null){
+            queryWrapper.eq("method", interfaceVo.getMethod());
         }
-        if (interfaceForm.getPath() != null){
-            queryWrapper.like("path",interfaceForm.getPath());
+        if (interfaceVo.getPath() != null){
+            queryWrapper.like("path", interfaceVo.getPath());
         }
-        queryWrapper.eq("is_delete",false).orderByDesc("id");
-        IPage<TbInterface> page = baseMapper.selectPage(new Page<>(interfaceForm.getPageIndex(), interfaceForm.getPageSize()),queryWrapper);
+        queryWrapper.eq("is_delete",false);
+        queryWrapper.orderByDesc("id");
+        IPage<TbInterface> page = baseMapper.selectPage(new Page<>(interfaceVo.getPageIndex(), interfaceVo.getPageSize()),queryWrapper);
         return new PageResult().setResult(page.getRecords()).setTotalElement(page.getTotal());
     }
 
     @Override
-    public boolean addInterface(InterfaceForm interfaceForm) {
+    public boolean addInterface(InterfaceVo interfaceVo) {
         TbInterface tbInterface = new TbInterface();
-        BeanUtils.copyProperties(interfaceForm, tbInterface);
+        BeanUtils.copyProperties(interfaceVo, tbInterface);
         return this.save(tbInterface);
     }
 
     @Override
-    public boolean updateInterfaceById(InterfaceForm interfaceForm) {
+    public boolean updateInterfaceById(InterfaceVo interfaceVo) {
         TbInterface tbInterface = new TbInterface();
-        BeanUtils.copyProperties(interfaceForm, tbInterface);
+        BeanUtils.copyProperties(interfaceVo, tbInterface);
         return this.updateById(tbInterface);
     }
 

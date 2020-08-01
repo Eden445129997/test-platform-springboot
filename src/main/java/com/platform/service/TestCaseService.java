@@ -2,19 +2,19 @@ package com.platform.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.platform.common.dto.page.PageResult;
-import com.platform.entity.TbTestCase;
-import com.platform.form.TestCaseForm;
+import com.platform.entity.domain.TbTestCase;
+import com.platform.entity.vo.TestCaseVo;
 
 import java.util.List;
 
 public interface TestCaseService extends IService<TbTestCase> {
-    PageResult<TbTestCase> queryTestCasebyKeyword(TestCaseForm testCaseForm);
+    PageResult<TbTestCase> queryTestCasebyKeyword(TestCaseVo testCaseVo);
 
     List<Integer> TestSuitCaseOrder(Integer planId);
 
-    boolean addTestCase(TestCaseForm testCaseForm);
+    boolean addTestCase(TestCaseVo testCaseVo);
 
-    boolean updateTestCaseById(TestCaseForm testCaseForm);
+    boolean updateTestCaseById(TestCaseVo testCaseVo);
 
     boolean logicalDeleteTestCase(Integer id);
 }

@@ -3,8 +3,8 @@ package com.platform.controller;
 import com.platform.common.Response;
 import com.platform.common.dto.page.PageResult;
 import com.platform.common.enums.ResStatus;
-import com.platform.entity.TbCheckPoint;
-import com.platform.form.CheckpointForm;
+import com.platform.entity.domain.TbCheckPoint;
+import com.platform.entity.vo.CheckpointVo;
 import com.platform.service.CheckpointService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -23,13 +23,13 @@ public class CheckpointController {
 
     /**
      * 根据关键字查询校验点（用例节点id、校验方法）
-     * @param checkpointForm
+     * @param checkpointVo
      * @return
      */
     @RequestMapping(method = RequestMethod.GET,value = "/queryCheckpointByCaseKeyword")
-    public Response<List<TbCheckPoint>> queryCheckpointByCaseKeyword(CheckpointForm checkpointForm){
+    public Response<List<TbCheckPoint>> queryCheckpointByCaseKeyword(CheckpointVo checkpointVo){
         PageResult<TbCheckPoint> result;
-        result = checkpointService.queryCheckpointByCaseKeyword(checkpointForm);
+        result = checkpointService.queryCheckpointByCaseKeyword(checkpointVo);
         return Response.success(ResStatus.SUCCESS.getMessage(),result.getResult(),result.getTotalElement());
     }
 
@@ -37,21 +37,21 @@ public class CheckpointController {
      * 添加检查点
      */
     @RequestMapping(method = RequestMethod.POST, value ="/addCheckpoint")
-    public Response<TbCheckPoint> addCheckpoint(@RequestBody @Validated CheckpointForm checkpointForm) {
-        return Response.success(ResStatus.SUCCESS.getMessage(),checkpointService.addCheckpoint(checkpointForm));
+    public Response<TbCheckPoint> addCheckpoint(@RequestBody @Validated CheckpointVo checkpointVo) {
+        return Response.success(ResStatus.SUCCESS.getMessage(),checkpointService.addCheckpoint(checkpointVo));
     };
 
     /**
      * 根据id修改检查点
-     * @param checkpointForm
+     * @param checkpointVo
      * @return
      */
     @RequestMapping(method = RequestMethod.PUT, value ="/updateCheckpointById")
-    public Response<TbCheckPoint> updateCheckpointById(@RequestBody CheckpointForm checkpointForm) {
-        if (checkpointForm.getId() == null) {
+    public Response<TbCheckPoint> updateCheckpointById(@RequestBody CheckpointVo checkpointVo) {
+        if (checkpointVo.getId() == null) {
             return Response.error(ResStatus.PARAMETER_ERROR);
         }
-        return Response.success(ResStatus.SUCCESS.getMessage(),checkpointService.updateCheckpointById(checkpointForm));
+        return Response.success(ResStatus.SUCCESS.getMessage(),checkpointService.updateCheckpointById(checkpointVo));
     };
 
     /**

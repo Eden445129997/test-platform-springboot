@@ -2,55 +2,74 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22cbf895-c90d-43dc-98d5-9a155dd54473" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/platform/controller/CheckpointController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/platform/dao/TbCheckpointMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/platform/form/CheckpointForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/CheckpointService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/CheckpointServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/platform/controller/ApiTestReportController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/vo/ApiTestReportVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/ApiTestReportService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/ApiTestReportImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbCheckPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbCheckPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/common/dto/form/BaseForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/common/dto/vo/BaseVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/controller/CheckpointController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/controller/CheckpointController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/controller/InterfaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/controller/InterfaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/controller/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/controller/ProjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/controller/TestCaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/controller/TestCaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/controller/TestCaseDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/controller/TestCaseDetailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/controller/TestPlanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/controller/TestPlanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/dao/TbApiTestReportDetailMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/dao/TbApiTestReportDetailMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/dao/TbApiTestReportMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/dao/TbApiTestReportMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/dao/TbBusiModelMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/dao/TbBusiModelMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/dao/TbCheckpointMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/dao/TbCheckpointMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/dao/TbHostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/dao/TbHostMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/dao/TbInterfaceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/dao/TbInterfaceMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/dao/TbProjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/dao/TbProjectMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/dao/TbTestCaseDetailMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/dao/TbTestCaseDetailMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/dao/TbTestCaseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/dao/TbTestCaseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/dao/TbTestPlanMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/dao/TbTestPlanMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbApiTestReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/domain/TbApiTestReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbApiTestReportDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/domain/TbApiTestReportDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbBusiModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/domain/TbBusiModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbCheckPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/domain/TbCheckPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/domain/TbHost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/domain/TbInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/domain/TbProject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/domain/TbTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbTestCaseDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/domain/TbTestCaseDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/TbTestPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/domain/TbTestPlan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/form/CheckpointForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/vo/CheckpointVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/form/InterfaceForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/vo/InterfaceVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/form/ProjectForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/vo/ProjectVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/form/TestCaseDetailForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/vo/TestCaseDetailVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/form/TestCaseForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/vo/TestCaseVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/form/TestPlanForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/vo/TestPlanVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/CheckpointService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/CheckpointService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/InterfaceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/InterfaceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/ProjectService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/TestCaseDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/TestCaseDetailService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/TestCaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/TestCaseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/TestPlanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/TestPlanService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/CheckpointServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/CheckpointServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/InterfaceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/InterfaceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/ProjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/ProjectServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/TestCaseDetailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/TestCaseDetailServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/TestCaseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/TestCaseServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/TestPlanServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/TestPlanServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/doc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/test-platform-java.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/test-platform-springboot.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/Response.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/dto/entity/BaseEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/platform/serviceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/platform/serviceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/dto/form/BaseForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/dto/page/BasePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/dto/page/PageResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/enums/IResponseEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/enums/ResStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/ApiServiceException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/ApiVersionException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/BaseException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/BizException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/DataImperfectException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/PunishedException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/RepeatNameException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/UnauthenticatedException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/VideoException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/utils/CamelUnderlineUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/config/MetaHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/config/MybatisPlusConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/controller/InterfaceController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/controller/ProjectController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/controller/TestCaseController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/controller/TestCaseDetailController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/controller/TestPlanController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbApiTestReportDetailMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbApiTestReportMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbBusiModelMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbHostMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbInterfaceMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbProjectMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbTestCaseDetailMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbTestCaseMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbTestPlanMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/controller/CheckpointController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/controller/CheckpointController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/controller/InterfaceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/controller/InterfaceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/controller/ProjectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/controller/ProjectController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/controller/TestCaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/controller/TestCaseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/controller/TestCaseDetailController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/controller/TestCaseDetailController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/controller/TestPlanController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/controller/TestPlanController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbApiTestReportDetailMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/dao/TbApiTestReportDetailMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbApiTestReportMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/dao/TbApiTestReportMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbBusiModelMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/dao/TbBusiModelMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbCheckpointMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/dao/TbCheckpointMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbHostMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/dao/TbHostMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbInterfaceMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/dao/TbInterfaceMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbProjectMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/dao/TbProjectMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbTestCaseDetailMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/dao/TbTestCaseDetailMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbTestCaseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/dao/TbTestCaseMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbTestPlanMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/dao/TbTestPlanMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/TbApiTestReport.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/TbApiTestReportDetail.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/TbBusiModel.class" beforeDir="false" />
@@ -61,28 +80,25 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/TbTestCase.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/TbTestCaseDetail.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/TbTestPlan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/form/CheckpointForm.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/platform/form/InterfaceForm.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/platform/form/ProjectForm.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/platform/form/TestCaseDetailForm.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/platform/form/TestCaseForm.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/platform/form/TestPlanForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/platformApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/InterfaceService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/ProjectService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/TestCaseDetailService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/TestCaseService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/TestPlanService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/InterfaceServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/ProjectServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/TestCaseDetailServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/TestCaseServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/TestPlanServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/doc/AllInOne.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/doc/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/api-platform-java.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/platform/serviceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/platform/smartDoc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/CheckpointService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/service/CheckpointService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/InterfaceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/service/InterfaceService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/ProjectService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/service/ProjectService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/TestCaseDetailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/service/TestCaseDetailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/TestCaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/service/TestCaseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/TestPlanService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/service/TestPlanService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/CheckpointServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/service/impl/CheckpointServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/InterfaceServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/service/impl/InterfaceServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/ProjectServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/service/impl/ProjectServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/TestCaseDetailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/service/impl/TestCaseDetailServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/TestCaseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/service/impl/TestCaseServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/TestPlanServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/service/impl/TestPlanServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/platform/serviceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/platform/serviceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +275,7 @@
       <workItem from="1595949049917" duration="4754000" />
       <workItem from="1596001784150" duration="8884000" />
       <workItem from="1596079615764" duration="9627000" />
-      <workItem from="1596249983845" duration="322000" />
+      <workItem from="1596249983845" duration="8473000" />
     </task>
     <servers />
   </component>
@@ -297,18 +313,19 @@
     <state x="496" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1045@0.23.1792.1045" timestamp="1595518316412" />
     <state x="496" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1046@0.23.1792.1046" timestamp="1595518226150" />
     <state x="496" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/1792.23.1920.1057/0.23.1792.1045@0.23.1792.1045" timestamp="1595484472983" />
-    <state x="2261" y="257" key="#com.intellij.ide.util.MemberChooser" timestamp="1596176529234">
+    <state x="2261" y="257" key="#com.intellij.ide.util.MemberChooser" timestamp="1596271954390">
       <screen x="1792" y="23" width="1920" height="1057" />
     </state>
     <state x="438" y="254" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1044@0.23.1792.1044" timestamp="1596079664303" />
     <state x="438" y="254" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1045@0.23.1792.1045" timestamp="1595841120915" />
     <state x="438" y="254" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1046@0.23.1792.1046" timestamp="1595838187191" />
-    <state x="2261" y="257" key="#com.intellij.ide.util.MemberChooser/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596176529234" />
+    <state x="2261" y="257" key="#com.intellij.ide.util.MemberChooser/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596271954390" />
     <state x="2261" y="257" key="#com.intellij.ide.util.MemberChooser/1792.23.1920.1057/0.23.1792.1047@1792.23.1920.1057" timestamp="1595670840627" />
-    <state x="329" y="477" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1593595816537">
-      <screen x="0" y="23" width="1792" height="1046" />
+    <state x="2145" y="482" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1596272441265">
+      <screen x="1792" y="23" width="1920" height="1057" />
     </state>
     <state x="329" y="477" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.23.1792.1046@0.23.1792.1046" timestamp="1593595816537" />
+    <state x="2145" y="482" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596272441265" />
     <state x="510" y="422" width="479" height="256" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1593595575585">
       <screen x="0" y="23" width="1792" height="1046" />
     </state>
@@ -317,12 +334,16 @@
       <screen x="0" y="23" width="1792" height="1046" />
     </state>
     <state x="520" y="434" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.23.1792.1046@0.23.1792.1046" timestamp="1593595818017" />
+    <state x="2049" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1596272433687">
+      <screen x="1792" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2049" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596272433687" />
     <state x="438" y="299" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594468299103">
       <screen x="0" y="23" width="1792" height="1047" />
     </state>
     <state x="438" y="299" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1792.1047@0.23.1792.1047" timestamp="1594468299103" />
     <state x="438" y="300" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1792.1049@0.23.1792.1049" timestamp="1593831419027" />
-    <state width="1204" height="396" key="GridCell.Tab.0.bottom" timestamp="1596249969180">
+    <state width="1204" height="354" key="GridCell.Tab.0.bottom" timestamp="1596250501252">
       <screen x="1792" y="23" width="1920" height="1057" />
     </state>
     <state width="1204" height="260" key="GridCell.Tab.0.bottom/0.23.1792.1044@0.23.1792.1044" timestamp="1596079602290" />
@@ -333,8 +354,8 @@
     <state width="1204" height="256" key="GridCell.Tab.0.bottom/0.23.1792.1049@0.23.1792.1049" timestamp="1595738516609" />
     <state width="1878" height="206" key="GridCell.Tab.0.bottom/1792.23.1920.1004/0.23.1792.1097@0.23.1792.1097" timestamp="1595411918913" />
     <state width="1204" height="260" key="GridCell.Tab.0.bottom/1792.23.1920.1057/0.23.1792.1044@0.23.1792.1044" timestamp="1596009862818" />
-    <state width="1204" height="396" key="GridCell.Tab.0.bottom/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596249969180" />
-    <state width="1204" height="396" key="GridCell.Tab.0.center" timestamp="1596249969179">
+    <state width="1204" height="354" key="GridCell.Tab.0.bottom/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596250501252" />
+    <state width="1204" height="354" key="GridCell.Tab.0.center" timestamp="1596250501252">
       <screen x="1792" y="23" width="1920" height="1057" />
     </state>
     <state width="1204" height="260" key="GridCell.Tab.0.center/0.23.1792.1044@0.23.1792.1044" timestamp="1596079602289" />
@@ -345,8 +366,8 @@
     <state width="1204" height="256" key="GridCell.Tab.0.center/0.23.1792.1049@0.23.1792.1049" timestamp="1595738516608" />
     <state width="1878" height="206" key="GridCell.Tab.0.center/1792.23.1920.1004/0.23.1792.1097@0.23.1792.1097" timestamp="1595411918912" />
     <state width="1204" height="260" key="GridCell.Tab.0.center/1792.23.1920.1057/0.23.1792.1044@0.23.1792.1044" timestamp="1596009862818" />
-    <state width="1204" height="396" key="GridCell.Tab.0.center/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596249969179" />
-    <state width="1204" height="396" key="GridCell.Tab.0.left" timestamp="1596249969179">
+    <state width="1204" height="354" key="GridCell.Tab.0.center/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596250501252" />
+    <state width="1204" height="354" key="GridCell.Tab.0.left" timestamp="1596250501251">
       <screen x="1792" y="23" width="1920" height="1057" />
     </state>
     <state width="1204" height="260" key="GridCell.Tab.0.left/0.23.1792.1044@0.23.1792.1044" timestamp="1596079602289" />
@@ -357,8 +378,8 @@
     <state width="1204" height="256" key="GridCell.Tab.0.left/0.23.1792.1049@0.23.1792.1049" timestamp="1595738516608" />
     <state width="1878" height="206" key="GridCell.Tab.0.left/1792.23.1920.1004/0.23.1792.1097@0.23.1792.1097" timestamp="1595411918912" />
     <state width="1204" height="260" key="GridCell.Tab.0.left/1792.23.1920.1057/0.23.1792.1044@0.23.1792.1044" timestamp="1596009862817" />
-    <state width="1204" height="396" key="GridCell.Tab.0.left/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596249969179" />
-    <state width="1204" height="396" key="GridCell.Tab.0.right" timestamp="1596249969179">
+    <state width="1204" height="354" key="GridCell.Tab.0.left/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596250501251" />
+    <state width="1204" height="354" key="GridCell.Tab.0.right" timestamp="1596250501252">
       <screen x="1792" y="23" width="1920" height="1057" />
     </state>
     <state width="1204" height="260" key="GridCell.Tab.0.right/0.23.1792.1044@0.23.1792.1044" timestamp="1596079602289" />
@@ -369,8 +390,8 @@
     <state width="1204" height="256" key="GridCell.Tab.0.right/0.23.1792.1049@0.23.1792.1049" timestamp="1595738516609" />
     <state width="1878" height="206" key="GridCell.Tab.0.right/1792.23.1920.1004/0.23.1792.1097@0.23.1792.1097" timestamp="1595411918913" />
     <state width="1204" height="260" key="GridCell.Tab.0.right/1792.23.1920.1057/0.23.1792.1044@0.23.1792.1044" timestamp="1596009862818" />
-    <state width="1204" height="396" key="GridCell.Tab.0.right/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596249969179" />
-    <state width="1204" height="396" key="GridCell.Tab.1.bottom" timestamp="1596249969180">
+    <state width="1204" height="354" key="GridCell.Tab.0.right/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596250501252" />
+    <state width="1204" height="354" key="GridCell.Tab.1.bottom" timestamp="1596250501253">
       <screen x="1792" y="23" width="1920" height="1057" />
     </state>
     <state width="1204" height="260" key="GridCell.Tab.1.bottom/0.23.1792.1044@0.23.1792.1044" timestamp="1596079602290" />
@@ -380,8 +401,8 @@
     <state width="1204" height="255" key="GridCell.Tab.1.bottom/0.23.1792.1048@0.23.1792.1048" timestamp="1595738978224" />
     <state width="1204" height="256" key="GridCell.Tab.1.bottom/0.23.1792.1049@0.23.1792.1049" timestamp="1595738516610" />
     <state width="1204" height="260" key="GridCell.Tab.1.bottom/1792.23.1920.1057/0.23.1792.1044@0.23.1792.1044" timestamp="1596009862819" />
-    <state width="1204" height="396" key="GridCell.Tab.1.bottom/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596249969180" />
-    <state width="1204" height="396" key="GridCell.Tab.1.center" timestamp="1596249969180">
+    <state width="1204" height="354" key="GridCell.Tab.1.bottom/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596250501253" />
+    <state width="1204" height="354" key="GridCell.Tab.1.center" timestamp="1596250501253">
       <screen x="1792" y="23" width="1920" height="1057" />
     </state>
     <state width="1204" height="260" key="GridCell.Tab.1.center/0.23.1792.1044@0.23.1792.1044" timestamp="1596079602290" />
@@ -391,8 +412,8 @@
     <state width="1204" height="255" key="GridCell.Tab.1.center/0.23.1792.1048@0.23.1792.1048" timestamp="1595738978224" />
     <state width="1204" height="256" key="GridCell.Tab.1.center/0.23.1792.1049@0.23.1792.1049" timestamp="1595738516609" />
     <state width="1204" height="260" key="GridCell.Tab.1.center/1792.23.1920.1057/0.23.1792.1044@0.23.1792.1044" timestamp="1596009862819" />
-    <state width="1204" height="396" key="GridCell.Tab.1.center/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596249969180" />
-    <state width="1204" height="396" key="GridCell.Tab.1.left" timestamp="1596249969180">
+    <state width="1204" height="354" key="GridCell.Tab.1.center/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596250501253" />
+    <state width="1204" height="354" key="GridCell.Tab.1.left" timestamp="1596250501252">
       <screen x="1792" y="23" width="1920" height="1057" />
     </state>
     <state width="1204" height="260" key="GridCell.Tab.1.left/0.23.1792.1044@0.23.1792.1044" timestamp="1596079602290" />
@@ -402,8 +423,8 @@
     <state width="1204" height="255" key="GridCell.Tab.1.left/0.23.1792.1048@0.23.1792.1048" timestamp="1595738978223" />
     <state width="1204" height="256" key="GridCell.Tab.1.left/0.23.1792.1049@0.23.1792.1049" timestamp="1595738516609" />
     <state width="1204" height="260" key="GridCell.Tab.1.left/1792.23.1920.1057/0.23.1792.1044@0.23.1792.1044" timestamp="1596009862818" />
-    <state width="1204" height="396" key="GridCell.Tab.1.left/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596249969180" />
-    <state width="1204" height="396" key="GridCell.Tab.1.right" timestamp="1596249969180">
+    <state width="1204" height="354" key="GridCell.Tab.1.left/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596250501252" />
+    <state width="1204" height="354" key="GridCell.Tab.1.right" timestamp="1596250501253">
       <screen x="1792" y="23" width="1920" height="1057" />
     </state>
     <state width="1204" height="260" key="GridCell.Tab.1.right/0.23.1792.1044@0.23.1792.1044" timestamp="1596079602290" />
@@ -413,7 +434,7 @@
     <state width="1204" height="255" key="GridCell.Tab.1.right/0.23.1792.1048@0.23.1792.1048" timestamp="1595738978224" />
     <state width="1204" height="256" key="GridCell.Tab.1.right/0.23.1792.1049@0.23.1792.1049" timestamp="1595738516610" />
     <state width="1204" height="260" key="GridCell.Tab.1.right/1792.23.1920.1057/0.23.1792.1044@0.23.1792.1044" timestamp="1596009862819" />
-    <state width="1204" height="396" key="GridCell.Tab.1.right/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596249969180" />
+    <state width="1204" height="354" key="GridCell.Tab.1.right/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596250501253" />
     <state width="1204" height="260" key="GridCell.Tab.2.bottom" timestamp="1595987036970">
       <screen x="0" y="23" width="1792" height="1044" />
     </state>
@@ -459,11 +480,11 @@
       <screen x="0" y="23" width="1792" height="1049" />
     </state>
     <state x="633" y="302" key="extract.method.dialog/0.23.1792.1049@0.23.1792.1049" timestamp="1595736479324" />
-    <state x="2431" y="279" width="643" height="545" key="find.popup" timestamp="1596249494842">
+    <state x="2431" y="279" width="643" height="545" key="find.popup" timestamp="1596250280065">
       <screen x="1792" y="23" width="1920" height="1057" />
     </state>
     <state x="596" y="276" width="600" height="538" key="find.popup/0.23.1792.1045@0.23.1792.1045" timestamp="1595861858819" />
-    <state x="2431" y="279" width="643" height="545" key="find.popup/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596249494842" />
+    <state x="2431" y="279" width="643" height="545" key="find.popup/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596250280065" />
     <state x="118" y="164" key="new project wizard" timestamp="1594488681538">
       <screen x="0" y="23" width="1792" height="1020" />
     </state>

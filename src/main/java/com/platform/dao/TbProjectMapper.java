@@ -1,7 +1,7 @@
 package com.platform.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.platform.entity.TbProject;
+import com.platform.entity.domain.TbProject;
 
 import java.util.List;
 

@@ -6,8 +6,8 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.platform.common.dto.page.PageResult;
 import com.platform.dao.TbCheckpointMapper;
-import com.platform.entity.TbCheckPoint;
-import com.platform.form.CheckpointForm;
+import com.platform.entity.domain.TbCheckPoint;
+import com.platform.entity.vo.CheckpointVo;
 import com.platform.service.CheckpointService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
@@ -21,20 +21,20 @@ public class CheckpointServiceImpl extends ServiceImpl<TbCheckpointMapper, TbChe
 
     /**
      * 根据关键字查询校验点（用例节点id、校验方法）
-     * @param checkpointForm
+     * @param checkpointVo
      * @return
      */
     @Override
-    public PageResult<TbCheckPoint> queryCheckpointByCaseKeyword(CheckpointForm checkpointForm) {
+    public PageResult<TbCheckPoint> queryCheckpointByCaseKeyword(CheckpointVo checkpointVo) {
         QueryWrapper<TbCheckPoint> queryWrapper = new QueryWrapper<>();
-        if (checkpointForm.getCaseDetailId() != null){
-            queryWrapper.eq("case_detail_id",checkpointForm.getCaseDetailId());
+        if (checkpointVo.getCaseDetailId() != null){
+            queryWrapper.eq("case_detail_id", checkpointVo.getCaseDetailId());
         }
-        if (checkpointForm.getCheckMethod() != null){
-            queryWrapper.eq("check_method",checkpointForm.getCheckMethod());
+        if (checkpointVo.getCheckMethod() != null){
+            queryWrapper.eq("check_method", checkpointVo.getCheckMethod());
         }
         queryWrapper.eq("is_delete", false);
-        IPage<TbCheckPoint> page = baseMapper.selectPage(new Page<>(checkpointForm.getPageIndex(), checkpointForm.getPageSize()),queryWrapper);
+        IPage<TbCheckPoint> page = baseMapper.selectPage(new Page<>(checkpointVo.getPageIndex(), checkpointVo.getPageSize()),queryWrapper);
         return new PageResult().setResult(page.getRecords()).setTotalElement(page.getTotal());
     }
 
@@ -52,16 +52,16 @@ public class CheckpointServiceImpl extends ServiceImpl<TbCheckpointMapper, TbChe
     }
 
     @Override
-    public boolean addCheckpoint(CheckpointForm checkpointForm) {
+    public boolean addCheckpoint(CheckpointVo checkpointVo) {
         TbCheckPoint tbCheckPoint = new TbCheckPoint();
-        BeanUtils.copyProperties(checkpointForm, tbCheckPoint);
+        BeanUtils.copyProperties(checkpointVo, tbCheckPoint);
         return this.save(tbCheckPoint);
     }
 
     @Override
-    public boolean updateCheckpointById(CheckpointForm checkpointForm) {
+    public boolean updateCheckpointById(CheckpointVo checkpointVo) {
         TbCheckPoint tbCheckPoint = new TbCheckPoint();
-        BeanUtils.copyProperties(checkpointForm, tbCheckPoint);
+        BeanUtils.copyProperties(checkpointVo, tbCheckPoint);
         return this.updateById(tbCheckPoint);
     }
 

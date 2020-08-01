@@ -3,8 +3,8 @@ package com.platform.controller;
 import com.platform.common.Response;
 import com.platform.common.dto.page.PageResult;
 import com.platform.common.enums.ResStatus;
-import com.platform.entity.TbInterface;
-import com.platform.form.InterfaceForm;
+import com.platform.entity.domain.TbInterface;
+import com.platform.entity.vo.InterfaceVo;
 import com.platform.service.InterfaceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -22,38 +22,38 @@ public class InterfaceController {
     private InterfaceService interfaceService;
 
     /**
-     * 根据关键字获取接口（project_id、busi_id、api_name、method、path）
-     * @param interfaceForm
+     * 根据关键字获取接口（projectId、busiId、apiName、method、path）
+     * @param interfaceVo
      * @return
      */
     @RequestMapping(method = RequestMethod.GET,value = "/queryInterfaceByKeyword")
-    public Response<List<TbInterface>> queryInterfaceByKeyword(InterfaceForm interfaceForm){
+    public Response<List<TbInterface>> queryInterfaceByKeyword(InterfaceVo interfaceVo){
         PageResult<TbInterface> result;
-        result = interfaceService.queryInterfaceByKeyword(interfaceForm);
+        result = interfaceService.queryInterfaceByKeyword(interfaceVo);
         return Response.success(ResStatus.SUCCESS.getMessage(),result.getResult(),result.getTotalElement());
     }
 
     /**
      * 添加接口数据
-     * @param interfaceForm
+     * @param interfaceVo
      * @return
      */
     @RequestMapping(method = RequestMethod.POST, value ="/addInterface")
-    public Response<TbInterface> addInterface(@RequestBody @Validated InterfaceForm interfaceForm) {
-        return Response.success(ResStatus.SUCCESS.getMessage(),interfaceService.addInterface(interfaceForm));
+    public Response<TbInterface> addInterface(@RequestBody @Validated InterfaceVo interfaceVo) {
+        return Response.success(ResStatus.SUCCESS.getMessage(),interfaceService.addInterface(interfaceVo));
     };
 
     /**
      * 根据id更新接口
-     * @param interfaceForm
+     * @param interfaceVo
      * @return
      */
     @RequestMapping(method = RequestMethod.PUT, value ="/updateInterfaceById")
-    public Response<TbInterface> updateInterfaceById(@RequestBody InterfaceForm interfaceForm) {
-        if (interfaceForm.getId() == null) {
+    public Response<TbInterface> updateInterfaceById(@RequestBody InterfaceVo interfaceVo) {
+        if (interfaceVo.getId() == null) {
             return Response.error(ResStatus.PARAMETER_ERROR);
         }
-        return Response.success(ResStatus.SUCCESS.getMessage(),interfaceService.updateInterfaceById(interfaceForm));
+        return Response.success(ResStatus.SUCCESS.getMessage(),interfaceService.updateInterfaceById(interfaceVo));
     };
 
     /**

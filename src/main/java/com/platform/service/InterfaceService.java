@@ -2,16 +2,16 @@ package com.platform.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.platform.common.dto.page.PageResult;
-import com.platform.entity.TbInterface;
-import com.platform.form.InterfaceForm;
+import com.platform.entity.domain.TbInterface;
+import com.platform.entity.vo.InterfaceVo;
 
 public interface InterfaceService  extends IService<TbInterface> {
 
-    PageResult<TbInterface> queryInterfaceByKeyword(InterfaceForm interfaceForm);
+    PageResult<TbInterface> queryInterfaceByKeyword(InterfaceVo interfaceVo);
 
-    boolean addInterface(InterfaceForm interfaceForm);
+    boolean addInterface(InterfaceVo interfaceVo);
 
-    boolean updateInterfaceById(InterfaceForm interfaceForm);
+    boolean updateInterfaceById(InterfaceVo interfaceVo);
 
     boolean logicalDeleteInterface(Integer id);
 }

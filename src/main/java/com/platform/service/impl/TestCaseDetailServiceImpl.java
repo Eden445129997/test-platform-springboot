@@ -7,8 +7,8 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.platform.common.dto.page.BasePage;
 import com.platform.common.dto.page.PageResult;
 import com.platform.dao.TbTestCaseDetailMapper;
-import com.platform.entity.TbTestCaseDetail;
-import com.platform.form.TestCaseDetailForm;
+import com.platform.entity.domain.TbTestCaseDetail;
+import com.platform.entity.vo.TestCaseDetailVo;
 import com.platform.service.TestCaseDetailService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
@@ -29,42 +29,42 @@ public class TestCaseDetailServiceImpl extends ServiceImpl<TbTestCaseDetailMappe
     }
 
     @Override
-    public boolean addTestCaseDetail(TestCaseDetailForm testCaseDetailForm) {
+    public boolean addTestCaseDetail(TestCaseDetailVo testCaseDetailVo) {
         TbTestCaseDetail tbTestCaseDetail = new TbTestCaseDetail();
         // 插入数据的默认值
-        if (testCaseDetailForm.getReconnectionTimes() == null) {
-            testCaseDetailForm.setReconnectionTimes(3);
+        if (testCaseDetailVo.getReconnectionTimes() == null) {
+            testCaseDetailVo.setReconnectionTimes(3);
         }
-        if (testCaseDetailForm.getWaitTime() == null) {
-            testCaseDetailForm.setWaitTime(10);
+        if (testCaseDetailVo.getWaitTime() == null) {
+            testCaseDetailVo.setWaitTime(10);
         }
-        if (testCaseDetailForm.getIsMock() == null) {
-            testCaseDetailForm.setIsMock(false);
+        if (testCaseDetailVo.getIsMock() == null) {
+            testCaseDetailVo.setIsMock(false);
         }
-        if (testCaseDetailForm.getMockResponse() == null) {
-            testCaseDetailForm.setMockResponse("{}");
+        if (testCaseDetailVo.getMockResponse() == null) {
+            testCaseDetailVo.setMockResponse("{}");
         }
-        if (testCaseDetailForm.getIsExpression() == null) {
-            testCaseDetailForm.setIsExpression(false);
+        if (testCaseDetailVo.getIsExpression() == null) {
+            testCaseDetailVo.setIsExpression(false);
         }
-        if (testCaseDetailForm.getHeaders() == null) {
-            testCaseDetailForm.setHeaders("{}");
+        if (testCaseDetailVo.getHeaders() == null) {
+            testCaseDetailVo.setHeaders("{}");
         }
-        if (testCaseDetailForm.getParames() == null) {
-            testCaseDetailForm.setParames("{}");
+        if (testCaseDetailVo.getParames() == null) {
+            testCaseDetailVo.setParames("{}");
         }
-        if (testCaseDetailForm.getData() == null) {
-            testCaseDetailForm.setData("{}");
+        if (testCaseDetailVo.getData() == null) {
+            testCaseDetailVo.setData("{}");
         }
-        BeanUtils.copyProperties(testCaseDetailForm, tbTestCaseDetail);
+        BeanUtils.copyProperties(testCaseDetailVo, tbTestCaseDetail);
         tbTestCaseDetail.setSort(0);
         return this.save(tbTestCaseDetail);
     }
 
     @Override
-    public boolean updateTestCaseDetailById(TestCaseDetailForm testCaseDetailForm) {
+    public boolean updateTestCaseDetailById(TestCaseDetailVo testCaseDetailVo) {
         TbTestCaseDetail tbTestCaseDetail = new TbTestCaseDetail();
-        BeanUtils.copyProperties(testCaseDetailForm, tbTestCaseDetail);
+        BeanUtils.copyProperties(testCaseDetailVo, tbTestCaseDetail);
         return this.updateById(tbTestCaseDetail);
     }
 

@@ -1,13 +1,12 @@
 package com.platform;
 
 import com.platform.dao.TbProjectMapper;
-import com.platform.entity.TbTestCase;
 import com.platform.service.ProjectService;
 import com.platform.service.TestCaseService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import com.platform.entity.TbProject;
+import com.platform.entity.domain.TbProject;
 
 import javax.annotation.Resource;
 import java.util.List;

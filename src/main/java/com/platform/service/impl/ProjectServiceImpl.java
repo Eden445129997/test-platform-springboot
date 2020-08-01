@@ -6,8 +6,8 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.platform.common.dto.page.PageResult;
 import com.platform.dao.TbProjectMapper;
-import com.platform.entity.TbProject;
-import com.platform.form.ProjectForm;
+import com.platform.entity.domain.TbProject;
+import com.platform.entity.vo.ProjectVo;
 import com.platform.service.ProjectService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
@@ -25,30 +25,31 @@ public class ProjectServiceImpl extends ServiceImpl<TbProjectMapper,TbProject> i
     /**
      * 根据项目名称分页模糊查询
      *
-     * @param projectForm
+     * @param projectVo
      */
     @Override
-    public PageResult<TbProject> queryProjectByKeyword(ProjectForm projectForm) {
+    public PageResult<TbProject> queryProjectByKeyword(ProjectVo projectVo) {
         QueryWrapper<TbProject> queryWrapper = new QueryWrapper<>();
-        if (projectForm.getProjectName() != null){
-            queryWrapper.like("project_name",projectForm.getProjectName());
+        if (projectVo.getProjectName() != null){
+            queryWrapper.like("project_name", projectVo.getProjectName());
         }
-        queryWrapper.eq("is_delete",false).orderByAsc("id");
-        IPage<TbProject> page = baseMapper.selectPage(new Page<>(projectForm.getPageIndex(), projectForm.getPageSize()),queryWrapper);
+        queryWrapper.eq("is_delete",false);
+        queryWrapper.orderByDesc("id");
+        IPage<TbProject> page = baseMapper.selectPage(new Page<>(projectVo.getPageIndex(), projectVo.getPageSize()),queryWrapper);
         return new PageResult().setResult(page.getRecords()).setTotalElement(page.getTotal());
     }
 
     @Override
-    public boolean addProject(ProjectForm projectForm) {
+    public boolean addProject(ProjectVo projectVo) {
         TbProject tbProject = new TbProject();
-        BeanUtils.copyProperties(projectForm, tbProject);
+        BeanUtils.copyProperties(projectVo, tbProject);
         return this.save(tbProject);
     }
 
     @Override
-    public boolean updateProjectById(ProjectForm projectForm) {
+    public boolean updateProjectById(ProjectVo projectVo) {
         TbProject tbProject = new TbProject();
-        BeanUtils.copyProperties(projectForm, tbProject);
+        BeanUtils.copyProperties(projectVo, tbProject);
         return this.updateById(tbProject);
     }
 

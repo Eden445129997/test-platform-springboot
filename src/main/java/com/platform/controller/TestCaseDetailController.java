@@ -3,9 +3,9 @@ package com.platform.controller;
 import com.platform.common.Response;
 import com.platform.common.dto.page.PageResult;
 import com.platform.common.enums.ResStatus;
-import com.platform.entity.TbTestCase;
-import com.platform.entity.TbTestCaseDetail;
-import com.platform.form.TestCaseDetailForm;
+import com.platform.entity.domain.TbTestCase;
+import com.platform.entity.domain.TbTestCaseDetail;
+import com.platform.entity.vo.TestCaseDetailVo;
 import com.platform.service.TestCaseDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -37,25 +37,25 @@ public class TestCaseDetailController {
 
     /**
      * 添加测试节点
-     * @param testCaseDetailForm
+     * @param testCaseDetailVo
      * @return
      */
     @RequestMapping(method = RequestMethod.POST,value = "/addTestCaseDetail")
-    public Response<List<TbTestCaseDetail>> addTestCaseDetail(@RequestBody @Validated TestCaseDetailForm testCaseDetailForm) {
-        return Response.success(ResStatus.SUCCESS.getMessage(),testCaseDetailService.addTestCaseDetail(testCaseDetailForm));
+    public Response<List<TbTestCaseDetail>> addTestCaseDetail(@RequestBody @Validated TestCaseDetailVo testCaseDetailVo) {
+        return Response.success(ResStatus.SUCCESS.getMessage(),testCaseDetailService.addTestCaseDetail(testCaseDetailVo));
     }
 
     /**
      * 根据id更新测试节点
-     * @param testCaseDetailForm
+     * @param testCaseDetailVo
      * @return
      */
     @RequestMapping(method = RequestMethod.PUT, value ="/updateTestCaseDetailById")
-    public Response<List<TbTestCaseDetail>> updateTestCaseDetailById(@RequestBody TestCaseDetailForm testCaseDetailForm) {
-        if (testCaseDetailForm.getId() == null) {
+    public Response<List<TbTestCaseDetail>> updateTestCaseDetailById(@RequestBody TestCaseDetailVo testCaseDetailVo) {
+        if (testCaseDetailVo.getId() == null) {
             return Response.error(ResStatus.PARAMETER_ERROR);
         }
-        return Response.success(ResStatus.SUCCESS.getMessage(),testCaseDetailService.updateTestCaseDetailById(testCaseDetailForm));
+        return Response.success(ResStatus.SUCCESS.getMessage(),testCaseDetailService.updateTestCaseDetailById(testCaseDetailVo));
     }
 
     /**

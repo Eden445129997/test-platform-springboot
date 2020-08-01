@@ -6,8 +6,8 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.platform.common.dto.page.PageResult;
 import com.platform.dao.TbTestPlanMapper;
-import com.platform.entity.TbTestPlan;
-import com.platform.form.TestPlanForm;
+import com.platform.entity.domain.TbTestPlan;
+import com.platform.entity.vo.TestPlanVo;
 import com.platform.service.TestPlanService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
@@ -19,44 +19,45 @@ public class TestPlanServiceImpl extends ServiceImpl<TbTestPlanMapper, TbTestPla
 
     /**
      * 根据关键字查询测试计划
-     * @param testPlanForm
+     * @param testPlanVo
      * @return
      */
     @Override
-    public PageResult<TbTestPlan> queryTestPlanByKeyword(TestPlanForm testPlanForm) {
+    public PageResult<TbTestPlan> queryTestPlanByKeyword(TestPlanVo testPlanVo) {
         QueryWrapper<TbTestPlan> queryWrapper = new QueryWrapper<>();
-        if (testPlanForm.getProjectId() != null){
-            queryWrapper.eq("project_id",testPlanForm.getProjectId());
+        if (testPlanVo.getProjectId() != null){
+            queryWrapper.eq("project_id", testPlanVo.getProjectId());
         }
-        if (testPlanForm.getPlanName() != null){
-            queryWrapper.like("plan_name",testPlanForm.getPlanName());
+        if (testPlanVo.getPlanName() != null){
+            queryWrapper.like("plan_name", testPlanVo.getPlanName());
         }
-        queryWrapper.eq("is_delete",false).orderByDesc("id");
-        IPage<TbTestPlan> page = baseMapper.selectPage(new Page<>(testPlanForm.getPageIndex(), testPlanForm.getPageSize()),queryWrapper);
+        queryWrapper.eq("is_delete",false);
+        queryWrapper.orderByDesc("id");
+        IPage<TbTestPlan> page = baseMapper.selectPage(new Page<>(testPlanVo.getPageIndex(), testPlanVo.getPageSize()),queryWrapper);
         return new PageResult().setResult(page.getRecords()).setTotalElement(page.getTotal());
     }
 
     /**
      * 添加测试计划
-     * @param testPlanForm
+     * @param testPlanVo
      * @return
      */
     @Override
-    public boolean addTestPlan(TestPlanForm testPlanForm) {
+    public boolean addTestPlan(TestPlanVo testPlanVo) {
         TbTestPlan tbTestPlan = new TbTestPlan();
-        BeanUtils.copyProperties(testPlanForm, tbTestPlan);
+        BeanUtils.copyProperties(testPlanVo, tbTestPlan);
         return this.save(tbTestPlan);
     }
 
     /**
      * 根据id更新测试计划
-     * @param testPlanForm
+     * @param testPlanVo
      * @return
      */
     @Override
-    public boolean updateTestPlanById(TestPlanForm testPlanForm) {
+    public boolean updateTestPlanById(TestPlanVo testPlanVo) {
         TbTestPlan tbTestPlan = new TbTestPlan();
-        BeanUtils.copyProperties(testPlanForm, tbTestPlan);
+        BeanUtils.copyProperties(testPlanVo, tbTestPlan);
         return this.updateById(tbTestPlan);
     }
 
