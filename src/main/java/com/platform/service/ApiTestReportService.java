@@ -10,9 +10,9 @@ public interface ApiTestReportService extends IService<TbApiTestReport> {
 
     TbApiTestReport queryApiTestReportByReportId(Integer reportId);
 
-    boolean addApiTestReport(ApiTestReportVo apiTestReportVo);
+    boolean addApiTestReport(TbApiTestReport tbApiTestReport);
 
-    boolean updateApiTestReportById(ApiTestReportVo apiTestReportVo);
+    boolean updateApiTestReportById(TbApiTestReport tbApiTestReport);
 
     boolean logicalDeleteApiTestReport(Integer id);
 }

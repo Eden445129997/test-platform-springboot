@@ -5,9 +5,13 @@ import com.platform.common.dto.page.PageResult;
 import com.platform.entity.domain.TbTestCaseDetail;
 import com.platform.entity.vo.TestCaseDetailVo;
 
+//import java.util.List;
+
 public interface TestCaseDetailService extends IService<TbTestCaseDetail> {
 
     PageResult<TbTestCaseDetail> queryTestCaseDetailByCaseId(Integer caseId);
+
+//    List<Integer> TestCaseDetailOrder(Integer caseId);
 
     boolean addTestCaseDetail(TestCaseDetailVo testCaseDetailVo);
 

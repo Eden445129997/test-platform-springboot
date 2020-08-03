@@ -14,10 +14,18 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 @Transactional
 public class TestCaseDetailServiceImpl extends ServiceImpl<TbTestCaseDetailMapper, TbTestCaseDetail> implements TestCaseDetailService {
 
+    /**
+     * 根据测试用例id查询节点（前端页面使用）
+     * @param caseId
+     * @return
+     */
     @Override
     public PageResult<TbTestCaseDetail> queryTestCaseDetailByCaseId(Integer caseId) {
         QueryWrapper<TbTestCaseDetail> queryWrapper = new QueryWrapper<>();
@@ -27,6 +35,21 @@ public class TestCaseDetailServiceImpl extends ServiceImpl<TbTestCaseDetailMappe
         IPage<TbTestCaseDetail> page = baseMapper.selectPage(new Page<>(basePage.getPageIndex(), basePage.getPageSize()), queryWrapper);
         return new PageResult().setResult(page.getRecords()).setTotalElement(page.getTotal());
     }
+
+//    /**
+//     * 根据测试用例id查询节点（执行测试套件使用）
+//     * @param caseId
+//     * @return
+//     */
+//    @Override
+//    public List<Integer> TestCaseDetailOrder(Integer caseId) {
+//        QueryWrapper<TbTestCaseDetail> queryWrapper = new QueryWrapper<>();
+//        List<Integer> orderTestCaseIdListOrder = new ArrayList();
+//
+//        queryWrapper.eq("case_id", caseId).eq("is_delete", false).eq("is_status", true);
+//        queryWrapper.orderByDesc("sort").orderByAsc("id");
+//        return null;
+//    }
 
     @Override
     public boolean addTestCaseDetail(TestCaseDetailVo testCaseDetailVo) {

@@ -9,7 +9,6 @@ import com.platform.dao.TbApiTestReportMapper;
 import com.platform.entity.domain.TbApiTestReport;
 import com.platform.entity.vo.ApiTestReportVo;
 import com.platform.service.ApiTestReportService;
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -37,16 +36,12 @@ public class ApiTestReportImpl extends ServiceImpl<TbApiTestReportMapper, TbApiT
     }
 
     @Override
-    public boolean addApiTestReport(ApiTestReportVo apiTestReportVo) {
-        TbApiTestReport tbApiTestReport = new TbApiTestReport();
-        BeanUtils.copyProperties(apiTestReportVo, tbApiTestReport);
+    public boolean addApiTestReport(TbApiTestReport tbApiTestReport) {
         return this.save(tbApiTestReport);
     }
 
     @Override
-    public boolean updateApiTestReportById(ApiTestReportVo apiTestReportVo) {
-        TbApiTestReport tbApiTestReport = new TbApiTestReport();
-        BeanUtils.copyProperties(apiTestReportVo, tbApiTestReport);
+    public boolean updateApiTestReportById(TbApiTestReport tbApiTestReport) {
         return this.updateById(tbApiTestReport);
     }
 
