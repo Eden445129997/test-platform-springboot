@@ -46,7 +46,7 @@ public class CheckpointServiceImpl extends ServiceImpl<TbCheckpointMapper, TbChe
     @Override
     public List<TbCheckPoint> queryCheckpointByCaseDetailId(Integer caseDetailId) {
         QueryWrapper<TbCheckPoint> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("case_detail_id", caseDetailId).eq("is_delete", false);
+        queryWrapper.eq("case_detail_id", caseDetailId).eq("is_delete", false).eq("is_status",true);
         List<TbCheckPoint> tbCheckPointList = baseMapper.selectList(queryWrapper);
         return tbCheckPointList;
     }

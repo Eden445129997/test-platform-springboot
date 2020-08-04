@@ -32,12 +32,12 @@ public class TbCheckPoint extends BaseEntity implements Serializable {
     private String checkMethod;
 
     /**
+     * 校验点的比对值（jsonpath表达式）
+     */
+    private String checkValue;
+
+    /**
      * 校验点描述
      */
     private String text;
-
-    /**
-     * 校验点的比对值
-     */
-    private String checkValue;
 }

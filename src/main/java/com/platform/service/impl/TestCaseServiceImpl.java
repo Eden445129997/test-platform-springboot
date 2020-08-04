@@ -22,6 +22,15 @@ import java.util.List;
 public class TestCaseServiceImpl extends ServiceImpl<TbTestCaseMapper, TbTestCase> implements TestCaseService {
 
     /**
+     * 测试套件执行排序规则(sort倒序，id生序)
+     * @param queryWrapper
+     * @return
+     */
+    public void Collation(QueryWrapper<TbTestCase> queryWrapper) {
+        queryWrapper.orderByDesc("sort").orderByAsc("id");
+    }
+
+    /**
      * 根据计划名称获取测试用例
      * 分页：selectPage
      * 排序：创建时间倒序排序
@@ -52,7 +61,7 @@ public class TestCaseServiceImpl extends ServiceImpl<TbTestCaseMapper, TbTestCas
         // 查询id
         queryWrapper.select("id");
         queryWrapper.eq("plan_id", planId).eq("is_delete", false).eq("is_status", true);
-        queryWrapper.orderByDesc("sort").orderByAsc("id");
+        this.Collation(queryWrapper);
         List<TbTestCase> tbTestCaseList = baseMapper.selectList(queryWrapper);
         // 装进list
         for (TbTestCase tbTestCase : tbTestCaseList ) {

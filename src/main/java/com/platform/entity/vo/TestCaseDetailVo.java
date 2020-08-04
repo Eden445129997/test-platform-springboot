@@ -71,7 +71,7 @@ public class TestCaseDetailVo extends BaseVo {
      * 默认"{}"
      */
     //默认值写在service层里
-    private String parames;
+    private String params;
 
     /**
      * 请求体里携带的参数

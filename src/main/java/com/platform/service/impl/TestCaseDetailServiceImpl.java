@@ -14,12 +14,20 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 @Transactional
 public class TestCaseDetailServiceImpl extends ServiceImpl<TbTestCaseDetailMapper, TbTestCaseDetail> implements TestCaseDetailService {
+
+    /**
+     * 测试用例节点的执行排序规则(sort倒序，id生序)
+     * @param queryWrapper
+     * @return
+     */
+    public void Collation(QueryWrapper<TbTestCaseDetail> queryWrapper) {
+        queryWrapper.orderByDesc("sort").orderByAsc("id");
+    }
 
     /**
      * 根据测试用例id查询节点（前端页面使用）
@@ -31,25 +39,23 @@ public class TestCaseDetailServiceImpl extends ServiceImpl<TbTestCaseDetailMappe
         QueryWrapper<TbTestCaseDetail> queryWrapper = new QueryWrapper<>();
         BasePage basePage = new BasePage();
         queryWrapper.eq("case_id", caseId).eq("is_delete", false);
-        queryWrapper.orderByDesc("sort").orderByAsc("id");
+        this.Collation(queryWrapper);
         IPage<TbTestCaseDetail> page = baseMapper.selectPage(new Page<>(basePage.getPageIndex(), basePage.getPageSize()), queryWrapper);
         return new PageResult().setResult(page.getRecords()).setTotalElement(page.getTotal());
     }
 
-//    /**
-//     * 根据测试用例id查询节点（执行测试套件使用）
-//     * @param caseId
-//     * @return
-//     */
-//    @Override
-//    public List<Integer> TestCaseDetailOrder(Integer caseId) {
-//        QueryWrapper<TbTestCaseDetail> queryWrapper = new QueryWrapper<>();
-//        List<Integer> orderTestCaseIdListOrder = new ArrayList();
-//
-//        queryWrapper.eq("case_id", caseId).eq("is_delete", false).eq("is_status", true);
-//        queryWrapper.orderByDesc("sort").orderByAsc("id");
-//        return null;
-//    }
+    /**
+     * 根据测试用例id查询测试节点（执行测试套件使用）
+     * @param caseId
+     * @return
+     */
+    @Override
+    public List<TbTestCaseDetail> TestSuitCaseDetailOrder(Integer caseId) {
+        QueryWrapper<TbTestCaseDetail> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("case_id", caseId).eq("is_delete", false).eq("is_status", true);
+        this.Collation(queryWrapper);
+        return baseMapper.selectList(queryWrapper);
+    }
 
     @Override
     public boolean addTestCaseDetail(TestCaseDetailVo testCaseDetailVo) {
@@ -73,8 +79,8 @@ public class TestCaseDetailServiceImpl extends ServiceImpl<TbTestCaseDetailMappe
         if (testCaseDetailVo.getHeaders() == null) {
             testCaseDetailVo.setHeaders("{}");
         }
-        if (testCaseDetailVo.getParames() == null) {
-            testCaseDetailVo.setParames("{}");
+        if (testCaseDetailVo.getParams() == null) {
+            testCaseDetailVo.setParams("{}");
         }
         if (testCaseDetailVo.getData() == null) {
             testCaseDetailVo.setData("{}");

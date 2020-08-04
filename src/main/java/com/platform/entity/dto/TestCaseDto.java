@@ -1,21 +1,12 @@
-package com.platform.entity.domain;
+package com.platform.entity.dto;
 
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.platform.common.dto.entity.BaseEntity;
-import lombok.AllArgsConstructor;
+import com.platform.entity.domain.TbCheckPoint;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
 
-import java.io.Serializable;
+import java.util.List;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
-@TableName("tb_test_case_detail")
-public class TbTestCaseDetail extends BaseEntity implements Serializable {
-
+public class TestCaseDto {
     /**
      * 关联的用例id
      */
@@ -25,6 +16,21 @@ public class TbTestCaseDetail extends BaseEntity implements Serializable {
      * 关联的接口id
      */
     private Integer interfaceId;
+
+    /**
+     * 接口名称
+     */
+    private String apiName;
+
+    /**
+     * 资源路径
+     */
+    private String path;
+
+    /**
+     * 请求方法
+     */
+    private String method;
 
     /**
      * 重联次数
@@ -75,4 +81,9 @@ public class TbTestCaseDetail extends BaseEntity implements Serializable {
      * 用例中节点的执行顺序
      */
     private Integer sort;
+
+    /**
+     * 检查点
+     */
+    private List<TbCheckPoint> tbCheckPointList;
 }

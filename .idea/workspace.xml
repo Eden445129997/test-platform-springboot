@@ -2,21 +2,95 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22cbf895-c90d-43dc-98d5-9a155dd54473" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/platform/controller/ApiTestReportDetailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/ApiTestReportDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/ApiTestReportDetailImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/dto/TestCaseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/TestSuitService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/TestSuitServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/ApiTestReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/ApiTestReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/domain/TbCheckPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/domain/TbCheckPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/domain/TbTestCaseDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/domain/TbTestCaseDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/entity/vo/TestCaseDetailVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/entity/vo/TestCaseDetailVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/TestCaseDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/TestCaseDetailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/ApiTestReportImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/ApiTestReportImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/CheckpointServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/CheckpointServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/TestCaseDetailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/TestCaseDetailServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/doc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/test-platform-springboot.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/ApiTestReportService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/service/ApiTestReportService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/TestCaseDetailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/service/TestCaseDetailService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/ApiTestReportImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/service/impl/ApiTestReportImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/TestCaseDetailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/platform/service/impl/TestCaseDetailServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/doc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/TestCaseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/platform/service/impl/TestCaseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/platform/serviceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/platform/serviceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/Response.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/dto/entity/BaseEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/dto/page/BasePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/dto/page/PageResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/dto/vo/BaseVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/enums/IResponseEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/enums/ResStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/ApiServiceException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/ApiVersionException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/BaseException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/BizException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/DataImperfectException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/PunishedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/RepeatNameException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/UnauthenticatedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/exception/VideoException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/common/utils/CamelUnderlineUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/config/MetaHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/config/MybatisPlusConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/controller/ApiTestReportController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/controller/ApiTestReportDetailController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/controller/CheckpointController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/controller/InterfaceController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/controller/ProjectController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/controller/TestCaseController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/controller/TestCaseDetailController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/controller/TestPlanController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbApiTestReportDetailMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbApiTestReportMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbBusiModelMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbCheckpointMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbHostMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbInterfaceMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbProjectMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbTestCaseDetailMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbTestCaseMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/dao/TbTestPlanMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/domain/TbApiTestReport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/domain/TbApiTestReportDetail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/domain/TbBusiModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/domain/TbCheckPoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/domain/TbHost.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/domain/TbInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/domain/TbProject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/domain/TbTestCase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/domain/TbTestCaseDetail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/domain/TbTestPlan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/vo/ApiTestReportVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/vo/CheckpointVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/vo/InterfaceVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/vo/ProjectVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/vo/TestCaseDetailVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/vo/TestCaseVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/entity/vo/TestPlanVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/platformApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/ApiTestReportDetailService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/ApiTestReportService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/CheckpointService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/InterfaceService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/ProjectService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/TestCaseDetailService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/TestCaseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/TestPlanService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/ApiTestReportDetailImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/ApiTestReportImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/CheckpointServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/InterfaceServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/ProjectServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/TestCaseDetailServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/TestCaseServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/platform/service/impl/TestPlanServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/doc/AllInOne.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/doc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/platform/serviceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/platform/smartDoc.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,18 +135,18 @@
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/mapper" />
+      <recent name="$PROJECT_DIR$/src/main/resources/platform/dao" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.platform" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/platform" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.platform.form" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/mapper" />
-      <recent name="$PROJECT_DIR$/src/main/resources/platform/dao" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/platform" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -82,18 +156,34 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.smartDoc.testBuilderControllersApi">
-    <configuration name="StudyApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="api" />
+  <component name="RunManager" selected="JUnit.serviceTest.getTestSuitByCaseId">
+    <configuration name="serviceTest.getTestSuitByCaseId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test-platform-springboot" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.platform.demo.*" />
+          <option name="PATTERN" value="com.platform.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.platform.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.platform.demo.StudyApplicationTests" />
-      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="PACKAGE_NAME" value="com.platform" />
+      <option name="MAIN_CLASS_NAME" value="com.platform.serviceTest" />
+      <option name="METHOD_NAME" value="getTestSuitByCaseId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="serviceTest.getTestSuitByPlanId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test-platform-springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.platform.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.platform" />
+      <option name="MAIN_CLASS_NAME" value="com.platform.serviceTest" />
+      <option name="METHOD_NAME" value="getTestSuitByPlanId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -146,10 +236,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.serviceTest.getTestSuitByCaseId" />
+        <item itemvalue="JUnit.serviceTest.getTestSuitByPlanId" />
+        <item itemvalue="JUnit.serviceTest.queryTestCaseByPlanId" />
         <item itemvalue="JUnit.smartDoc.testBuilderControllersApi" />
         <item itemvalue="Spring Boot.platformApplication" />
-        <item itemvalue="JUnit.serviceTest.queryTestCaseByPlanId" />
-        <item itemvalue="JUnit.StudyApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +284,7 @@
       <workItem from="1595949049917" duration="4754000" />
       <workItem from="1596001784150" duration="8884000" />
       <workItem from="1596079615764" duration="9627000" />
-      <workItem from="1596249983845" duration="15800000" />
+      <workItem from="1596249983845" duration="34687000" />
     </task>
     <servers />
   </component>
@@ -231,13 +322,13 @@
     <state x="496" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1045@0.23.1792.1045" timestamp="1595518316412" />
     <state x="496" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1046@0.23.1792.1046" timestamp="1595518226150" />
     <state x="496" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/1792.23.1920.1057/0.23.1792.1045@0.23.1792.1045" timestamp="1595484472983" />
-    <state x="2261" y="257" key="#com.intellij.ide.util.MemberChooser" timestamp="1596425526340">
-      <screen x="1792" y="23" width="1920" height="1057" />
+    <state x="438" y="254" key="#com.intellij.ide.util.MemberChooser" timestamp="1596474409150">
+      <screen x="0" y="23" width="1792" height="1044" />
     </state>
-    <state x="438" y="254" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1044@0.23.1792.1044" timestamp="1596282316180" />
+    <state x="438" y="254" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1044@0.23.1792.1044" timestamp="1596474409150" />
     <state x="438" y="254" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1045@0.23.1792.1045" timestamp="1595841120915" />
     <state x="438" y="254" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1046@0.23.1792.1046" timestamp="1595838187191" />
-    <state x="2261" y="257" key="#com.intellij.ide.util.MemberChooser/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596425526340" />
+    <state x="2261" y="257" key="#com.intellij.ide.util.MemberChooser/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596445176892" />
     <state x="2261" y="257" key="#com.intellij.ide.util.MemberChooser/1792.23.1920.1057/0.23.1792.1047@1792.23.1920.1057" timestamp="1595670840627" />
     <state x="2145" y="482" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1596272441265">
       <screen x="1792" y="23" width="1920" height="1057" />
@@ -261,10 +352,10 @@
     </state>
     <state x="438" y="299" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1792.1047@0.23.1792.1047" timestamp="1594468299103" />
     <state x="438" y="300" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1792.1049@0.23.1792.1049" timestamp="1593831419027" />
-    <state width="1750" height="323" key="GridCell.Tab.0.bottom" timestamp="1596424413985">
-      <screen x="1792" y="23" width="1920" height="1057" />
+    <state width="1750" height="227" key="GridCell.Tab.0.bottom" timestamp="1596475941772">
+      <screen x="0" y="23" width="1792" height="1044" />
     </state>
-    <state width="1204" height="260" key="GridCell.Tab.0.bottom/0.23.1792.1044@0.23.1792.1044" timestamp="1596079602290" />
+    <state width="1750" height="227" key="GridCell.Tab.0.bottom/0.23.1792.1044@0.23.1792.1044" timestamp="1596475941772" />
     <state width="1204" height="429" key="GridCell.Tab.0.bottom/0.23.1792.1045@0.23.1792.1045" timestamp="1595947209932" />
     <state width="1204" height="268" key="GridCell.Tab.0.bottom/0.23.1792.1046@0.23.1792.1046" timestamp="1595916264192" />
     <state width="1204" height="270" key="GridCell.Tab.0.bottom/0.23.1792.1047@0.23.1792.1047" timestamp="1595834107926" />
@@ -272,11 +363,11 @@
     <state width="1204" height="256" key="GridCell.Tab.0.bottom/0.23.1792.1049@0.23.1792.1049" timestamp="1595738516609" />
     <state width="1878" height="206" key="GridCell.Tab.0.bottom/1792.23.1920.1004/0.23.1792.1097@0.23.1792.1097" timestamp="1595411918913" />
     <state width="1204" height="260" key="GridCell.Tab.0.bottom/1792.23.1920.1057/0.23.1792.1044@0.23.1792.1044" timestamp="1596009862818" />
-    <state width="1750" height="323" key="GridCell.Tab.0.bottom/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596424413985" />
-    <state width="1750" height="323" key="GridCell.Tab.0.center" timestamp="1596424413984">
-      <screen x="1792" y="23" width="1920" height="1057" />
+    <state width="1750" height="311" key="GridCell.Tab.0.bottom/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596432859936" />
+    <state width="1750" height="227" key="GridCell.Tab.0.center" timestamp="1596475941772">
+      <screen x="0" y="23" width="1792" height="1044" />
     </state>
-    <state width="1204" height="260" key="GridCell.Tab.0.center/0.23.1792.1044@0.23.1792.1044" timestamp="1596079602289" />
+    <state width="1750" height="227" key="GridCell.Tab.0.center/0.23.1792.1044@0.23.1792.1044" timestamp="1596475941772" />
     <state width="1204" height="429" key="GridCell.Tab.0.center/0.23.1792.1045@0.23.1792.1045" timestamp="1595947209931" />
     <state width="1204" height="268" key="GridCell.Tab.0.center/0.23.1792.1046@0.23.1792.1046" timestamp="1595916264192" />
     <state width="1204" height="270" key="GridCell.Tab.0.center/0.23.1792.1047@0.23.1792.1047" timestamp="1595834107925" />
@@ -284,11 +375,11 @@
     <state width="1204" height="256" key="GridCell.Tab.0.center/0.23.1792.1049@0.23.1792.1049" timestamp="1595738516608" />
     <state width="1878" height="206" key="GridCell.Tab.0.center/1792.23.1920.1004/0.23.1792.1097@0.23.1792.1097" timestamp="1595411918912" />
     <state width="1204" height="260" key="GridCell.Tab.0.center/1792.23.1920.1057/0.23.1792.1044@0.23.1792.1044" timestamp="1596009862818" />
-    <state width="1750" height="323" key="GridCell.Tab.0.center/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596424413984" />
-    <state width="1750" height="323" key="GridCell.Tab.0.left" timestamp="1596424413984">
-      <screen x="1792" y="23" width="1920" height="1057" />
+    <state width="1750" height="311" key="GridCell.Tab.0.center/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596432859936" />
+    <state width="1750" height="227" key="GridCell.Tab.0.left" timestamp="1596475941771">
+      <screen x="0" y="23" width="1792" height="1044" />
     </state>
-    <state width="1204" height="260" key="GridCell.Tab.0.left/0.23.1792.1044@0.23.1792.1044" timestamp="1596079602289" />
+    <state width="1750" height="227" key="GridCell.Tab.0.left/0.23.1792.1044@0.23.1792.1044" timestamp="1596475941771" />
     <state width="1204" height="429" key="GridCell.Tab.0.left/0.23.1792.1045@0.23.1792.1045" timestamp="1595947209931" />
     <state width="1204" height="268" key="GridCell.Tab.0.left/0.23.1792.1046@0.23.1792.1046" timestamp="1595916264191" />
     <state width="1204" height="270" key="GridCell.Tab.0.left/0.23.1792.1047@0.23.1792.1047" timestamp="1595834107925" />
@@ -296,11 +387,11 @@
     <state width="1204" height="256" key="GridCell.Tab.0.left/0.23.1792.1049@0.23.1792.1049" timestamp="1595738516608" />
     <state width="1878" height="206" key="GridCell.Tab.0.left/1792.23.1920.1004/0.23.1792.1097@0.23.1792.1097" timestamp="1595411918912" />
     <state width="1204" height="260" key="GridCell.Tab.0.left/1792.23.1920.1057/0.23.1792.1044@0.23.1792.1044" timestamp="1596009862817" />
-    <state width="1750" height="323" key="GridCell.Tab.0.left/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596424413984" />
-    <state width="1750" height="323" key="GridCell.Tab.0.right" timestamp="1596424413985">
-      <screen x="1792" y="23" width="1920" height="1057" />
+    <state width="1750" height="311" key="GridCell.Tab.0.left/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596432859935" />
+    <state width="1750" height="227" key="GridCell.Tab.0.right" timestamp="1596475941772">
+      <screen x="0" y="23" width="1792" height="1044" />
     </state>
-    <state width="1204" height="260" key="GridCell.Tab.0.right/0.23.1792.1044@0.23.1792.1044" timestamp="1596079602289" />
+    <state width="1750" height="227" key="GridCell.Tab.0.right/0.23.1792.1044@0.23.1792.1044" timestamp="1596475941772" />
     <state width="1204" height="429" key="GridCell.Tab.0.right/0.23.1792.1045@0.23.1792.1045" timestamp="1595947209931" />
     <state width="1204" height="268" key="GridCell.Tab.0.right/0.23.1792.1046@0.23.1792.1046" timestamp="1595916264192" />
     <state width="1204" height="270" key="GridCell.Tab.0.right/0.23.1792.1047@0.23.1792.1047" timestamp="1595834107925" />
@@ -308,7 +399,7 @@
     <state width="1204" height="256" key="GridCell.Tab.0.right/0.23.1792.1049@0.23.1792.1049" timestamp="1595738516609" />
     <state width="1878" height="206" key="GridCell.Tab.0.right/1792.23.1920.1004/0.23.1792.1097@0.23.1792.1097" timestamp="1595411918913" />
     <state width="1204" height="260" key="GridCell.Tab.0.right/1792.23.1920.1057/0.23.1792.1044@0.23.1792.1044" timestamp="1596009862818" />
-    <state width="1750" height="323" key="GridCell.Tab.0.right/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596424413985" />
+    <state width="1750" height="311" key="GridCell.Tab.0.right/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596432859936" />
     <state width="1204" height="354" key="GridCell.Tab.1.bottom" timestamp="1596250501253">
       <screen x="1792" y="23" width="1920" height="1057" />
     </state>
@@ -394,9 +485,10 @@
     </state>
     <state x="251" y="185" key="SettingsEditor/0.23.1792.1047@0.23.1792.1047" timestamp="1593871996127" />
     <state x="251" y="185" key="SettingsEditor/0.23.1792.1049@0.23.1792.1049" timestamp="1595738057647" />
-    <state x="633" y="302" key="extract.method.dialog" timestamp="1595736479324">
-      <screen x="0" y="23" width="1792" height="1049" />
+    <state x="633" y="301" key="extract.method.dialog" timestamp="1596473701670">
+      <screen x="0" y="23" width="1792" height="1044" />
     </state>
+    <state x="633" y="301" key="extract.method.dialog/0.23.1792.1044@0.23.1792.1044" timestamp="1596473701670" />
     <state x="633" y="302" key="extract.method.dialog/0.23.1792.1049@0.23.1792.1049" timestamp="1595736479324" />
     <state x="2431" y="279" width="643" height="545" key="find.popup" timestamp="1596250280065">
       <screen x="1792" y="23" width="1920" height="1057" />
@@ -408,10 +500,11 @@
     </state>
     <state x="118" y="164" key="new project wizard/0.23.1792.1020@0.23.1792.1020" timestamp="1594488681538" />
     <state x="118" y="168" key="new project wizard/0.23.1792.1046@0.23.1792.1046" timestamp="1593595746867" />
-    <state x="365" y="255" width="670" height="678" key="search.everywhere.popup" timestamp="1595833748672">
-      <screen x="0" y="23" width="1792" height="1047" />
+    <state x="2183" y="257" width="718" height="685" key="search.everywhere.popup" timestamp="1596440332823">
+      <screen x="1792" y="23" width="1920" height="1057" />
     </state>
     <state x="365" y="255" width="670" height="676" key="search.everywhere.popup/0.23.1792.1045@0.23.1792.1045" timestamp="1594002164694" />
     <state x="365" y="255" width="670" height="678" key="search.everywhere.popup/0.23.1792.1047@0.23.1792.1047" timestamp="1595833748672" />
+    <state x="2183" y="257" width="718" height="685" key="search.everywhere.popup/1792.23.1920.1057/0.23.1792.1044@1792.23.1920.1057" timestamp="1596440332823" />
   </component>
 </project>

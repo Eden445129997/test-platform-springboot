@@ -2,7 +2,9 @@ package com.platform;
 
 import com.platform.dao.TbProjectMapper;
 import com.platform.service.ProjectService;
+import com.platform.service.TestCaseDetailService;
 import com.platform.service.TestCaseService;
+import com.platform.service.TestSuitService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,6 +25,12 @@ public class serviceTest {
     @Autowired
     TestCaseService testCaseService;
 
+    @Autowired
+    TestCaseDetailService testCaseDetailService;
+
+    @Autowired
+    TestSuitService testSuitService;
+
     @Test
     public void getTbProjectMapper() {
         List<TbProject> result;
@@ -37,8 +45,15 @@ public class serviceTest {
     public void queryTestCaseByPlanId() {
         List<Integer> orderList = testCaseService.TestSuitCaseOrder(1);
         System.out.println(orderList);
-//        for (Integer id : orderList ) {
-//            System.out.println(id);
-//        }
+    }
+
+    @Test
+    public void getTestSuitByPlanId() {
+        testSuitService.getTestSuitByPlanId(1);
+    }
+
+    @Test
+    public void getTestSuitByCaseId() {
+        testSuitService.getTestSuitByCaseId(1);
     }
 }
